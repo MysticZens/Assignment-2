@@ -7,6 +7,7 @@
     flex-direction: row;
 }
 .first-text{
+    margin-top: 10%;
     width: 15%;
     font-size: 30px;
     border:solid 3px green;
@@ -15,8 +16,16 @@
     width: 74%;
     border:solid 3px green;
 }
+.second-text img{
+    width: 100%;
+}
 .third-text{
+    margin-top:8%;
     width:15%;
     font-size: 30px;
     border:solid 3px green;
+}
+.main-header{
+    text-align: center;
+    margin:4%;
 }
