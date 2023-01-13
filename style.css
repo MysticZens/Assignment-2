@@ -124,26 +124,31 @@ span.psw {
 }
 /* End form */
 .bg1{
-    background-color: #E2FF19;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images\ or\ gifs/starfall.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .main-header{
     text-align: center;
     margin:2%;
 }
-.game-box{
+.game-text{
     margin: 2% 2% 0 2%;
     display:flex;
     flex-direction: row;
+    color:white;
 }
 .first-text{
     margin-top: 10%;
     width: 15%;
     font-size: 30px;
-    border:solid 3px green;
 }
 .second-text{
     width: 74%;
-    border:solid 3px green;
 }
 .second-text img{
     width: 100%;
@@ -152,5 +157,10 @@ span.psw {
     margin-top:8%;
     width:15%;
     font-size: 30px;
+}
+.a{
     border:solid 3px green;
+}
+.main-header{
+    color:white;
 }
