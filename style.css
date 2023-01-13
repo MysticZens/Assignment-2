@@ -1,5 +1,12 @@
 /* For form */
 /* The Modal (background) */
+.navbar{
+    padding:1.5%;
+}
+.fa-arrow-pointer{
+    font-size: 25px;
+}
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
