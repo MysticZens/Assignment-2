@@ -5,7 +5,8 @@ body{
 .container{
     text-align: center;
 }
-.btn{
+
+.button{
     border: 1px solid white;
     background: none;
     padding: 10px 20px;
@@ -14,13 +15,13 @@ body{
     cursor: pointer;
     margin: 10px;
 }
-.btn4{
+.button4{
     color:blue;
 }
-.btn4:hover{
+.button4:hover{
     color:red;
 }
-.btn::before{
+.button::before{
     content: "";
     position: absolute;
     left: 0;
@@ -30,19 +31,11 @@ body{
     z-index: -1;
     transition: 0.8s;
 }
-.btn4::before{
+.button4::before{
     bottom: 0;
     border-radius: 50% 50% 0 0;
 }
-.bg1{
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(images\ or\ gifs/starfall.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 .main-header{
     text-align: center;
     margin:2%;
