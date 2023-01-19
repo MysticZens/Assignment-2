@@ -10,12 +10,12 @@ When we decided to make this website, this website is for gamers, specifically t
 - As a player who wants to try out new FPS games, this is a good start for training their FPS gaming skills and experience how FPS feels like.
 - As a regular player who does not play games, it is convenient for them to visit the website to play without having to download any content to their desktop. 
 ### Wireframe Links
-# Desktop Version
+#### Desktop Version
 - https://xd.adobe.com/view/ac8c8b5d-743a-47d0-913a-77fb8bef9f4e-f9df/
 - https://xd.adobe.com/view/6bf68062-9edb-4f52-9406-04f365ca296c-3ea5/
 - https://xd.adobe.com/view/f603da65-3ca6-4c2d-9937-5c68c87dcd3d-a350/
 - https://xd.adobe.com/view/f603da65-3ca6-4c2d-9937-5c68c87dcd3d-a350/
-# Mobile version
+#### Mobile version
 - https://xd.adobe.com/view/063bab8d-932d-4c4c-8164-0ecb9a94af34-5368/
 - https://xd.adobe.com/view/c08a7b25-f687-4e6e-9c5a-dd80b461ec1b-95d9/
 - https://xd.adobe.com/view/f18cf68c-1c4a-4242-b199-b95c0d449c8e-a4df/
