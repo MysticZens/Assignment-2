@@ -66,7 +66,11 @@
     font-size: 150%;
 }
 
-h5 {
+h6 {
     text-align: center;
+    color: white;
+}
+
+.hi {
     color: white;
 }
