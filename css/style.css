@@ -51,7 +51,24 @@
     animation-fill-mode: forwards;
 }
 /* End animation */
+/* Socials animation*/
+.social-icon {
+    display: inline-block;
+}
+  
+.social-icon img {
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.social-icon img:hover {
+    transform: rotateY(180deg);
+    text-decoration: none;
+}
 
+/* end socials */
 .main-header{
     text-align: center;
     margin:2%;
@@ -112,7 +129,8 @@
 }
 .game:hover{
     text-decoration: none;
-    color: red;
+    color: #FFCCCB;
+    background-color: rgba(14, 14, 71, 0.6);
     cursor: pointer;
     transform: translateY(-10px);
 }
