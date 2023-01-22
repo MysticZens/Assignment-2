@@ -1,3 +1,57 @@
+/* Grow animation */
+#grow{
+    font-size: 0%;
+}
+@keyframes grow {
+    from {
+      font-size: 0%;
+    }
+    to {
+      font-size: 200%;
+    }
+}
+#grow{
+    font-size: 0;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#grow1{
+    font-size: 0%;
+}
+@keyframes grow1 {
+    from {
+      font-size: 0%;
+    }
+    to {
+      font-size: 100%;
+    }
+}
+#grow1{
+    font-size: 0;
+    animation-name: grow1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#grow2{
+    font-size: 0%;
+}
+@keyframes grow2 {
+    from {
+      font-size: 0%;
+    }
+    to {
+      font-size: 180%;
+    }
+}
+#grow2{
+    font-size: 0;
+    animation-name: grow2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+/* End animation */
+
 .main-header{
     text-align: center;
     margin:2%;
@@ -9,9 +63,9 @@
     color:white;
 }
 .first-text{
+    text-align: center;
     margin-top: 10%;
     width: 15%;
-    font-size: 30px;
 }
 .second-text{
     width: 74%;
@@ -20,9 +74,9 @@
     width: 100%;
 }
 .third-text{
-    margin-top:8%;
+    text-align: center;
+    margin-top:10%;
     width:15%;
-    font-size: 30px;
 }
 .a{
     border:solid 3px green;
@@ -41,19 +95,26 @@
 }
 .game-choice{
     display: flex;
+    flex-direction: column;
+}
+.row-one{
+    display: flex;
     flex-direction: row;
 }
 .game{
     color: white;
     text-decoration: none;
     text-align: center;
-    width: 30%;
-    margin: 0 2% 0 2%;
+    width: 45%;
+    margin: 2% 5% 2% 5%;
+    transform: translateY(0);
+    transition: 0.2s;
 }
 .game:hover{
     text-decoration: none;
     color: red;
     cursor: pointer;
+    transform: translateY(-10px);
 }
 .hr-bottom{
     padding:2%;
@@ -65,9 +126,9 @@
     color: white;
     font-size: 150%;
 }
-
 h6 {
     text-align: center;
     color: white;
 }
+
 
