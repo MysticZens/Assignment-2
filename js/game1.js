@@ -41,11 +41,6 @@ function spawnCircle() {
   circle.classList.add("circle");
   circle.style.left = x + "%";
   circle.style.top = y + "%";
-  circle.style.position = "absolute";
-  circle.style.width = "10%";
-  circle.style.height = "10%";
-  circle.style.borderRadius = "50%";
-  circle.style.backgroundColor = "red";
   circle.onclick = function() {
     score++;
     document.getElementById("score").innerHTML = score;
@@ -54,7 +49,3 @@ function spawnCircle() {
   };
   gameArea.appendChild(circle);
 }
-
-
-
-
