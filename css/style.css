@@ -50,6 +50,23 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
+#grow3{
+    width: 0%;
+}
+@keyframes grow3 {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+}
+#grow3{
+    width: 0%;
+    animation-name: grow3;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
 /* End animation */
 /* Socials animation*/
 .social-icon {
