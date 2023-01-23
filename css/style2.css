@@ -32,10 +32,11 @@
 
 /* Game stuff */
 #game-area {
+    border: 1px solid black;
     color: white;
-    width: 96%;
-    margin: 0 2% 0 2%;
-    height: 550px;
+    width: 80%;
+    margin: 0 10% 0 10%;
+    height: 500px;
     margin: auto;
     position: relative;
     background-color: rgba(4, 4, 58, 0.5);
@@ -50,19 +51,25 @@
 }
   
 #start-button {
+    padding: 1%;
+    border: 1px solid blue;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+} 
+.score-time{
+    border-radius: 10px;
+    padding: 2%;
+    color: white;
+    width: 40%;
+    margin: 0 30% 0 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
-  
-#scoreboard {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-}
-  
-#game-over {
+
+/* #end-game {
     width: 50%;
     height: 50%;
     margin: auto;
@@ -75,5 +82,5 @@
 #play-again-button, #cancel-button {
     display: block;
     margin: 10px auto;
-}
-  /*End game  */
+} */
+/* End game  */

@@ -25,18 +25,22 @@ background-attachment: fixed;">
   </div>
   <br>
   <br>
-  <div id="game-area">
-    <div id="scoreboard">
-      Score: <span id="score"></span>
+  <div class="a game">
+    <div id="game-area">
+        <div id="start-button" onclick="startGame()">Start Game</div>
+        <div id="end-game">
+          <div id="final-score">Final Score: <span id="final-score-value"></span></div>
+          <div id="play-again-button" onclick="startGame()">Play Again</div>
+          <div id="cancel-button" onclick="endGame()">Cancel</div>
+        </div>
     </div>
-    <div id="time-checker">
-      Time Remaining: <span id="time"></span>
-    </div>
-    <div id="start-button" onclick="startGame()">Start Game</div>
-    <div id="end-game">
-      <div id="final-score">Final Score: <span id="final-score-value"></span></div>
-      <div id="play-again-button" onclick="startGame()">Play Again</div>
-      <div id="cancel-button" onclick="endGame()">Cancel</div>
+    <div class="a score-time">
+        <div id="scoreboard">
+            Score: <span id="score">0</span>
+          </div>
+        <div id="time-checker">
+            Time Remaining: <span id="time">20</span>
+        </div>
     </div>
   </div>
   

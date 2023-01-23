@@ -2,6 +2,7 @@ var score = 0;
 var time = 20;
 var intervalId;
 var circle;
+document.getElementById("end-game").style.display = "none";
 
 function startGame() {
   document.getElementById("start-button").style.display = "none";
