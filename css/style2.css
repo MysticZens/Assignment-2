@@ -1,0 +1,76 @@
+.a{
+    border:3px solid green;
+}
+.footer {
+    text-align: center;
+    color: white;
+}
+.back-button{
+    color: white;
+    text-decoration: none;
+    font-size: 170%;
+    text-align: center;
+    transform: translateX(0);
+    transition: 0.2s;
+}
+.back-button:hover{
+    transform: translateX(-10px);
+}
+.back-button a{
+    color: white;
+}
+.back-button a:hover{
+    text-decoration: none;
+    color: #FFCCCB;
+    text-decoration: none;
+}
+.game{
+    margin: 0 2% 0 2%;
+}
+
+
+
+/* Game stuff */
+#game-area {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    border: 1px solid black;
+}
+  
+#circle {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    position: absolute;
+}
+  
+#start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+#scoreboard {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+  
+#game-over {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: none;
+}
+  
+#play-again-button, #cancel-button {
+    display: block;
+    margin: 10px auto;
+}
+  /*End game  */
