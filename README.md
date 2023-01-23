@@ -66,7 +66,7 @@ Here are some of the features that I have used for my website:
 ### Content
 - Inspiration for our website is from : aimtrainer.io
 ### Media
-Note : *The gif currently at the front is not going to be used in the end product of the website*
+Note : *The gif currently in index.html is not going to be used in the end product of the website*
 - Shooting Star background : https://www.google.com/url?sa=i&url=https%3A%2F%2Fusagif.com%2Fstarfall-gifs%2F&psig=AOvVaw1TSfDM6y94pYTYUQBJL5zE&ust=1674556712865000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPD-kYLA3fwCFQAAAAAdAAAAABAE
 - Facebook icon : https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/2048px-Facebook_logo_36x36.svg.png
 - Instagram icon : https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png
