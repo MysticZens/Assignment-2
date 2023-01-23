@@ -58,29 +58,77 @@
     left: 50%;
     transform: translate(-50%, -50%);
 } 
-.score-time{
+.score-time-display{
+    font-size: 130%;
     border-radius: 10px;
-    padding: 2%;
+    padding:1%;
     color: white;
-    width: 40%;
-    margin: 0 30% 0 30%;
+    width: 35%;
+    margin-left: 10%;
     text-align: center;
     display: flex;
     flex-direction: row;
 }
-
-/* #end-game {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    display: none;
+.score-time-color{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
-  
-#play-again-button, #cancel-button {
-    display: block;
-    margin: 10px auto;
-} */
+.color-change{
+    color: white;
+    width: 10%;
+    height: 50%;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 35%;
+}
 /* End game  */
+
+/* Dropdown stuff */
+.sub-menu-wrap{
+    z-index: 4;
+    position: absolute;
+    top: 121%;
+    right: 12%;
+    width: 120px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+/* Increases the max-height which will allow the dropdown menu to show itself */
+.sub-menu-wrap.open-menu{
+    z-index: 4;
+    max-height: 340px;
+}
+/* Giving the dropdown menu a backgroud color, padding and margin */
+.sub-menu{
+    background-color: rgba(4, 4, 58, 0.7);
+    padding: 20px;
+    margin: 10px;
+}
+/* Styling of links in the drop down menu */
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 12px 0;
+}
+/* Givingn width to the text in dropdown menu */
+.sub-menu-link p{
+    width: 100%;
+}
+/* Giving an animation of 5px difference when a mouse hovers over the text  */
+.sub-menu-link:hover p{
+    cursor: pointer;
+    font-weight: 600;
+}
+.color-change{
+    transform: translateY(0);
+    transition: 0.3s;
+}
+.color-change:hover{
+    cursor: pointer;
+    font-weight: 600;
+    transform: translateY(-5px)
+}

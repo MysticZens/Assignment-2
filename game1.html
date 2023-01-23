@@ -26,6 +26,7 @@ background-attachment: fixed;">
   <br>
   <br>
   <div class="a game">
+
     <div id="game-area">
         <div id="start-button" onclick="startGame()">Start Game</div>
         <div id="end-game">
@@ -34,14 +35,53 @@ background-attachment: fixed;">
           <div id="cancel-button" onclick="endGame()">Cancel</div>
         </div>
     </div>
-    <div class="a score-time">
+
+    <div class="a score-time-color">
+      <div class="a score-time-display">
         <div id="scoreboard">
-            Score: <span id="score">0</span>
+          &nbsp;&nbsp;&nbsp;Score: <span id="score">0</span>
           </div>
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
         <div id="time-checker">
             Time Remaining: <span id="time">20</span>
         </div>
+      </div>
+      <div class="a color-change">
+        <p onclick="toggleMenu()"><i class="fa-solid fa-palette"></i>&nbsp;Target Color</p>
+      </div>
     </div>
+
+    <div class="sub-menu-wrap" id = "subMenu">
+      <div class="sub-menu">
+              
+          <div id = "red" class="sub-menu-link">
+            <p>Red</p>
+          </div>
+
+          <div id = "Green" class="sub-menu-link">
+            <p>Green</p>
+          </div>
+
+          <div id = "Yellow" class="sub-menu-link">
+            <p>Yellow</p>
+          </div>
+              
+          <div id = "Blue" class="sub-menu-link">
+            <p>Blue</p>
+          </div>
+            
+          <div id = "Black" class="sub-menu-link">
+            <p>Black</p>
+          </div>
+              
+          <div id = "Pink" class="sub-menu-link">
+            <p>Pink</p>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
   </div>
   
   <div class="footer">

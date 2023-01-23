@@ -50,3 +50,11 @@ function spawnCircle() {
   };
   gameArea.appendChild(circle);
 }
+
+
+// Functions for drop down
+let subMenu = document.getElementById("subMenu");
+
+function toggleMenu(){
+    subMenu.classList.toggle("open-menu");
+}
