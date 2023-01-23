@@ -114,7 +114,7 @@
     color: white;
     margin: 12px 0;
 }
-/* Givingn width to the text in dropdown menu */
+/* Giving width to the text in dropdown menu */
 .sub-menu-link p{
     width: 100%;
 }
@@ -129,6 +129,54 @@
 }
 .color-change:hover{
     cursor: pointer;
-    font-weight: 600;
-    transform: translateY(-5px)
+    transform: translateY(-5px);
 }
+#red{
+    transition: 0.2s;
+}
+#green{
+    transition: 0.2s;
+}
+#black{
+    transition: 0.2s;
+}
+#yellow{
+    transition: 0.2s;
+}
+#blue{
+    transition: 0.2s;
+}
+#pink{
+    transition: 0.2s;
+}
+#red:hover{
+    color:red;
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+#green:hover{
+    color:green;
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+#yellow:hover{
+    color:yellow;
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+#blue:hover{
+    color:blue;
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+#black:hover{
+    color:black;
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+#pink:hover{
+    color:pink;
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+/* End Dropdown */

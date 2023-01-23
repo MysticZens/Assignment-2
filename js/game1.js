@@ -58,3 +58,18 @@ let subMenu = document.getElementById("subMenu");
 function toggleMenu(){
     subMenu.classList.toggle("open-menu");
 }
+
+//Functions for color change
+function changeStyle(className, property, value) {
+  var cssRules;
+  for (var i = 0; i < document.styleSheets.length; i++) {
+      cssRules = document.styleSheets[i].cssRules;
+      for (var j = 0; j < cssRules.length; j++) {
+          if (cssRules[j].selectorText === className) {
+              cssRules[j].style.setProperty(property, value);
+              alert("Color Changed Successfully");
+              break;
+          }
+      }
+  }
+}
