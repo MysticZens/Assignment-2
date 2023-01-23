@@ -72,5 +72,5 @@ Note : *The gif currently at the front is not going to be used in the end produc
 - Instagram icon : https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png
 
 ### Acknowledgements
-- Ng Qian Zhe
-- Muhammad Isaac bin Mohammed Khaizad
+- Ng Qian Zhe  (https://github.com/MysticZens)
+- Muhammad Isaac bin Mohammed Khaizad  (https://github.com/MIbmkz)
