@@ -1,0 +1,28 @@
+.a{
+    border:3px solid green;
+}
+.footer {
+    text-align: center;
+    color: white;
+}
+.back-button{
+    width: 12%;
+    margin: 0 44% 0 44%;
+    color: white;
+    text-decoration: none;
+    font-size: 170%;
+    text-align: center;
+    transform: translateX(0);
+    transition: 0.2s;
+}
+.back-button:hover{
+    transform: translateX(-10px);
+}
+.back-button a{
+    color: white;
+}
+.back-button a:hover{
+    text-decoration: none;
+    color: #FFCCCB;
+    text-decoration: none;
+}

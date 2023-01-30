@@ -40,6 +40,7 @@ function spawnCircle() {
   var y = Math.random() * 80;
   circle = document.createElement("div");
   circle.classList.add("circle");
+  circle.id = "target";
   circle.style.left = x + "%";
   circle.style.top = y + "%";
   circle.onclick = function() {
