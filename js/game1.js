@@ -61,16 +61,12 @@ function toggleMenu(){
 }
 
 //Functions for color change
-function changeStyle(className, property, value) {
-  var cssRules;
-  for (var i = 0; i < document.styleSheets.length; i++) {
-      cssRules = document.styleSheets[i].cssRules;
-      for (var j = 0; j < cssRules.length; j++) {
-          if (cssRules[j].selectorText === className) {
-              cssRules[j].style.setProperty(property, value);
-              alert("Color Changed Successfully");
-              break;
-          }
-      }
-  }
+function changeStyle(value){
+  var stylesheet = document.styleSheets[1];
+  var outerCircleRule = stylesheet.cssRules[0];
+  var innerCircleRule = stylesheet.cssRules[2];
+
+  outerCircleRule.style.backgroundColor = value;
+  innerCircleRule.style.backgroundColor = value;
+  alert("Color Changed Successfully")
 }
