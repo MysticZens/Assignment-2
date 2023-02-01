@@ -20,6 +20,13 @@
     text-align: center;
     margin:2%;
 }
+.game-header{
+    color: white;
+    text-align: center;     
+}
+.game-header > h1{
+    font-size: 3vw;
+}
 .game-text{
     margin: 2% 2% 0 2%;
     display:flex;
@@ -29,7 +36,7 @@
 .first-text{
     text-align: center;
     font-size: 2vw;
-    margin-top: 12%;
+    margin-top: 10%;
     width: 15%;
 }
 .second-text{
