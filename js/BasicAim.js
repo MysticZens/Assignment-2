@@ -53,7 +53,31 @@ function spawnCircle() {
   gameArea.appendChild(circle);
 }
 
-function displaysubmit(){
+function displaySubmit(){
+  document.getElementById("final-score-values").innerHTML = score;
+  document.getElementById("end-game").style.display = "none";
+  document.getElementById("submission-menu").style.display = "block";
+}
+
+function spawnCircle() {
+  var gameArea = document.getElementById("game-area");
+  var x = Math.random() * 80;
+  var y = Math.random() * 80;
+  circle = document.createElement("div");
+  circle.classList.add("circle");
+  circle.id = "target";
+  circle.style.left = x + "%";
+  circle.style.top = y + "%";
+  circle.onclick = function() {
+    score++;
+    document.getElementById("score").innerHTML = score;
+    gameArea.removeChild(circle);
+    spawnCircle();
+  };
+  gameArea.appendChild(circle);
+}
+
+function displaySubmit(){
   document.getElementById("final-score-values").innerHTML = score;
   document.getElementById("end-game").style.display = "none";
   document.getElementById("submission-menu").style.display = "block";
@@ -75,4 +99,79 @@ function changeStyle(value){
   outerCircleRule.style.backgroundColor = value;
   innerCircleRule.style.backgroundColor = value;
   alert("Color Changed Successfully")
+}
+
+const APIKEY = "63db111c3bc6b255ed0c4562";
+getContacts();
+$("#submit-score").on("click", function(e) {
+  const Date = Date();
+  e.preventDefault();
+  let userName = $("#name").val();
+  let userScore = score;
+  let userDate = Date;
+  
+  let jsondata = {
+    "name": userName,
+    "score": userScore,
+    "date": userDate
+  };
+
+  if (userName == "")
+  {
+    alert("You must input a name!");
+  }
+
+  else {
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://minigamefps-2325.restdb.io/rest/basicaiming",
+      "method": "POST",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache"
+      },
+      "processData": false,
+      "data": JSON.stringify(jsondata),
+      "beforeSend": function() {
+        $("submit-score").prop("disabled", true);
+      }
+    }
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      $("#submit-score").prop("disabled", false);
+      getContacts();
+    });
+  }
+});
+
+function getContacts(limit = 10, all = true) {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://minigamefps-2325.restdb.io/rest/basicaiming",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache"
+    }
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+
+    let content = "";
+
+    for (var i = 0; i < response.length && i < limit; i++)
+    {
+      content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+      <td>${response[i].score}</td>
+      <td>${response[i].date}</td>`
+    }
+
+    $("user-list tbody").html(content);
+  });
 }
