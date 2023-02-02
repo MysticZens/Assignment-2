@@ -177,6 +177,7 @@
 }
 
 #submit-score{
+    border:transparent;
     text-align: center;
     background-color: #4caf50;
     color: white;
