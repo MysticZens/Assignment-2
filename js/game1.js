@@ -3,6 +3,7 @@ var time = 20;
 var intervalId;
 var circle;
 document.getElementById("end-game").style.display = "none";
+document.getElementById("submission-menu").style.display = "none";
 
 function startGame() {
   document.getElementById("start-button").style.display = "none";
@@ -52,6 +53,11 @@ function spawnCircle() {
   gameArea.appendChild(circle);
 }
 
+function displaysubmit(){
+  document.getElementById("final-score-values").innerHTML = score;
+  document.getElementById("end-game").style.display = "none";
+  document.getElementById("submission-menu").style.display = "block";
+}
 
 // Functions for drop down
 let subMenu = document.getElementById("subMenu");
