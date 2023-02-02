@@ -65,6 +65,7 @@ function spawnCircle() {
   var y = Math.random() * 80;
   circle = document.createElement("div");
   circle.classList.add("circle");
+  circle.classList.add("animate1");
   circle.id = "target";
   circle.style.left = x + "%";
   circle.style.top = y + "%";
@@ -83,6 +84,10 @@ function displaySubmit(){
   document.getElementById("submission-menu").style.display = "block";
 }
 
+function cancelsubmit(){
+  document.getElementById("submission-menu").style.display = "none";
+  document.getElementById("end-game").style.display = "block";
+}
 // Functions for drop down
 let subMenu = document.getElementById("subMenu");
 
