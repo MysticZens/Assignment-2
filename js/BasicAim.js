@@ -103,19 +103,13 @@ function changeStyle(value){
 
 $(document).ready(function () {
   const APIKEY = "63db111c3bc6b255ed0c4562";
-  const date = new Date();
-  let day = date.getDate();
-  let monthName = date.toLocaleString("default", {month: "long"});
-  let year = date.getFullYear();
-
-  let currentDate = `${day} ${monthName} ${year}`
   getContacts();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
       let userScore = score;
-      let userDate = currentDate;
-      
+      let userDate = "$now";
+
       let jsondata = {
       "name": userName,
       "score": userScore,
@@ -157,7 +151,7 @@ $(document).ready(function () {
       let settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://minigamefps-2325.restdb.io/rest/basicaiming",
+          "url": "https://minigamefps-2325.restdb.io/rest/basicaiming?q={}&sort=score&dir=-1",
           "method": "GET",
           "headers": {
           "content-type": "application/json",
@@ -168,17 +162,17 @@ $(document).ready(function () {
 
       $.ajax(settings).done(function (response) {
           console.log(response);
-
           let content = "";
-
           for (var i = 0; i < response.length && i < limit; i++)
           {
-          content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
-          <td>${response[i].score}</td>
-          <td>${response[i].date}</td>`
+            content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+            <td>${response[i].score}</td>
+            <td>${response[i].date}</td></tr>`
           }
 
           $("#user-list tbody").html(content);
       });
   }
 })
+
+

@@ -304,6 +304,10 @@
     transform: translateX(5px);
     transition: 0.2s;
 }
+
+tbody {
+    color: white;
+}
 /* End Dropdown */
 
 /* Zoom animation */
