@@ -3,6 +3,8 @@ const startBtn = document.getElementById("startBtn");
 const result = document.getElementById("result");
 const time = document.getElementById("time");
 const message = document.getElementById("message");
+document.getElementById("result").style.display = "none";
+// document.getElementById("end-game").style.display = "none";
 
 let startTime;
 let intervalId;
@@ -30,12 +32,14 @@ gameArea.addEventListener("click", function() {
     if (clickCount < 5) {
       intervalId = setTimeout(startGame, Math.random() * 5000 + 1000);
     } else {
+      document.getElementById("final-score-value").innerHTML = time.innerHTML;
       startBtn.style.display = "inline";
     }
   }
 });
 
 startBtn.addEventListener("click", function() {
+  document.getElementById("result").style.display = "block";
   startBtn.style.display = "none";
   clickCount = 0;
   totalTime = 0;

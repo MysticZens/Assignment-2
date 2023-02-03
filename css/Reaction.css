@@ -16,7 +16,24 @@
 .hidden {
     display: none;
 }
-#start
+#result{
+    margin-top: 10%;
+    color: white;
+}
+#startBtn{
+    width: 8%;
+    position: absolute;
+    left:45%;
+    color: black;
+    background-color: white;
+    padding: 1% 1% 1% 1%;
+    font-size: 2vh;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    cursor: pointer;
+    text-align: center;
+}
 /* End game stuff */
 
 .a{
@@ -46,4 +63,19 @@
     text-decoration: none;
     color: #FFCCCB;
     text-decoration: none;
+}
+/* Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
 }
