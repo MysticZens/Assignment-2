@@ -9,7 +9,7 @@ function startGame() {
   document.getElementById("start-button").style.display = "none";
   document.getElementById("end-game").style.display = "none";
   score = 0;
-  time = 1;
+  time = 10;
   document.getElementById("score").innerHTML = score;
   document.getElementById("time").innerHTML = time;
   intervalId = setInterval(countdown, 1000);
@@ -113,7 +113,7 @@ $(document).ready(function () {
       e.preventDefault();
       let userName = $("#name").val();
       let userScore = score;
-      let userDate = "$now";
+      let userDate = Date();
 
       let jsondata = {
       "name": userName,
@@ -172,7 +172,7 @@ $(document).ready(function () {
           {
             content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
             <td>${response[i].score}</td>
-            <td>${response[i].date}</td></tr>`
+            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
           }
 
           $("#user-list tbody").html(content);
