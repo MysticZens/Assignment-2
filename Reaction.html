@@ -27,15 +27,25 @@ background-attachment: fixed;">
   <div class="a game">
     <div id="gameArea">
       <div id="end-game" class = "animate">
+        <span id="close" onclick="reshow()">&times;</span>
         <div id="final-score">Final Score: <span id="final-score-value"></span> ms</div>
-        <div id="play-again-button" onclick="startGame()">Play Again</div>
         <div id="submit-button" onclick="displaySubmit()">Submit Your Score!</div>
+      </div>
+      <div id="submission-menu" class = "animate">
+        <span id="close" onclick="cancelSubmit()">&times;</span>
+        <div id="final-score">Your Final Score: <span id="final-score-values"></span> ms</div>
+        <p style="color: black;">Enter the name you want to display!</p>
+        <input type="text" id="name" required>
+        <div id="submit-score-button">
+        <input type="submit" id="submit-score">
+        </div>
+        <p style="color: black;">You are about to submit this into the leaderboard!</p>
       </div>
       <h2>Click when the box turns green!</h2>
       <p id="result">Your average time reaction: <span id="time">0</span> ms</p>
     </div>
     <br>
-    <div id="startBtn" class = "animate">Start</div>
+    <div id="startBtn" class = "animate" onclick = "start()">Start</div>
     
     <p id="message" class="hidden"></p>
   </div>
