@@ -1,7 +1,9 @@
 /* Game Stuff */
 #gameArea {
-    width: 200px;
-    height: 200px;
+    width: 80%;
+    height: 300px;
+    margin: 0 10% 0 10%;
+    border-radius: 20px;
     background-color: red;
     text-align: center;
 }
@@ -14,6 +16,7 @@
 .hidden {
     display: none;
 }
+#start
 /* End game stuff */
 
 .a{

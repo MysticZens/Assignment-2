@@ -8,9 +8,18 @@ let startTime;
 let intervalId;
 let clickCount = 0;
 let totalTime = 0;
+let gameStarted = false;
 
 gameArea.addEventListener("click", function() {
-  if (gameArea.style.backgroundColor === "green") {
+  if (gameStarted && gameArea.style.backgroundColor === "red") {
+    message.innerHTML = "You clicked too early!";
+    message.classList.remove("hidden");
+    clearTimeout(intervalId);
+    gameStarted = false;
+    clickCount = 0;
+    totalTime = 0;
+    startBtn.style.display = "inline";
+  } else if (gameArea.style.backgroundColor === "green") {
     let endTime = new Date().getTime();
     clickCount++;
     totalTime += endTime - startTime;
@@ -23,13 +32,6 @@ gameArea.addEventListener("click", function() {
     } else {
       startBtn.style.display = "inline";
     }
-  } else {
-    message.innerHTML = "You clicked too early!";
-    message.classList.remove("hidden");
-    clearTimeout(intervalId);
-    clickCount = 0;
-    totalTime = 0;
-    startBtn.style.display = "inline";
   }
 });
 
@@ -39,6 +41,7 @@ startBtn.addEventListener("click", function() {
   totalTime = 0;
   time.innerHTML = "0";
   message.classList.add("hidden");
+  gameStarted = true;
   intervalId = setTimeout(startGame, Math.random() * 5000 + 1000);
 });
 
@@ -49,3 +52,4 @@ function startGame() {
 
 startBtn.style.display = "inline";
 gameArea.style.backgroundColor = "red";
+
