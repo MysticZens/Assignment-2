@@ -25,15 +25,30 @@ background-attachment: fixed;">
   </div>
   <br><br>
   <div class = "a" id="gameContainer">
-    <div id="countdown">Time remaining: 10</div>
-    <div id="game-area">
+    <div id="countdown" class = "prevent-select">Time remaining: 10</div>
+    <div id="game-area" class = "prevent-select">
         <div id = "counter"></div>
+        <div id="end-game" class = "animate">
+            <div id="final-score">Final Score: <span id="final-score-value"></span></div>
+            <div id="play-again-button">Play Again</div>
+            <div id="submit-button" onclick="displaySubmit()">Submit Your Score!</div>
+        </div>
+        <div id="submission-menu" class = "animate">
+            <span id="close" onclick="cancelsubmit()">&times;</span>
+            <div id="final-score">Your Final Score: <span id="final-score-values"></span></div>
+            <p style="color: black;">Enter the name you want to display!</p>
+            <input type="text" id="name" required>
+            <div id="submit-score-button">
+            <input type="submit" id="submit-score">
+            </div>
+            <p style="color: black;">You are about to submit this into the leaderboard!</p>
+        </div>
     </div>
     <div id="start-button" class = "animate">Start Game</div>
-    <div id="score">Score: 0</div>
+    <div id="score" class = "prevent-select">Score: 0</div>
   </div> 
 
-  <div class="a leaderboard-area">
+  <div class="a leaderboard-area prevent-select">
     <h2>Global leaderboard</h2>
   </div>
   <br><br>

@@ -3,6 +3,8 @@ const gameArea = document.getElementById("game-area");
 const startButton = document.getElementById("start-button");
 const score = document.getElementById("score");
 
+document.getElementById("end-game").style.display = "none";
+
 let clicks = 0;
 let timeLeft = 10;
 let intervalId;
@@ -29,21 +31,27 @@ startButton.addEventListener("click", function() {
     countdown.innerHTML = `Time remaining: ${timeLeft}`;
     intervalId = setInterval(function() {
       timeLeft--;
+      counter.innerHTML = "";
       countdown.innerHTML = `Time remaining: ${timeLeft}`;
       if (timeLeft === 0) {
         clearInterval(intervalId);
-        countdown.innerHTML = `Time's up! Final score: ${clicks} <br> <button id="play-again">Play Again</button>`;
-        document.getElementById("play-again").addEventListener("click", playAgain);
+        countdown.innerHTML = `Time's up! Final score: ${clicks}`;
+        document.getElementById("final-score-value").innerHTML = clicks;
+        document.getElementById("end-game").style.display = "block";
+        document.getElementById("play-again-button").addEventListener("click", playAgain);
       }
     }, 1000);
   }, 3000);
 });
 
 function playAgain() {
-  clicks = 0;
-  timeLeft = 10;
-  gameStarted = false;
-  score.innerHTML = "Score: 0";
-  countdown.innerHTML = `Time remaining: ${timeLeft}`;
-  startButton.style.display = "inline-block";
+    document.getElementById("end-game").style.display = "none";
+    clicks = 0;
+    timeLeft = 10;
+    gameStarted = false;
+    score.innerHTML = "Score: 0";
+    countdown.innerHTML = `Time remaining: ${timeLeft}`;
+    startButton.style.display = "inline-block";
 }
+
+function displaySubmit()
