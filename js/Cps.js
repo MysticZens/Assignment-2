@@ -65,7 +65,8 @@ function CancelSubmit(){
 }
 
 $(document).ready(function () {
-  const APIKEY = "63de211e3bc6b255ed0c463c";
+  const APIKEY = "63de50323bc6b255ed0c4656";
+  let existingName = false;
   getContacts();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
@@ -87,6 +88,10 @@ $(document).ready(function () {
       else if (userName.length > 8)
       {
         alert("Your name must be at least 8 characters or more.");
+      }
+
+      else if (existingName) {
+        alert("Username has been taken. Please enter another username.");
       }
 
       else {
@@ -139,6 +144,13 @@ $(document).ready(function () {
           }
 
           $("#user-list tbody").html(content);
+
+          for (var i = 0; i < response.length; i++) {
+            if (response[i].userName === $("#name").val()) {
+              existingName = true;
+              break;
+            }
+          }
       });
   }
 })

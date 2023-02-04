@@ -106,7 +106,8 @@ function changeStyle(value){
 }
 
 $(document).ready(function () {
-  const APIKEY = "63de211e3bc6b255ed0c463c";
+  const APIKEY = "63de50323bc6b255ed0c4656";
+  let existingName = false;
   getContacts();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
@@ -130,11 +131,15 @@ $(document).ready(function () {
         alert("Your name must be at most 8 characters or less.");
       }
 
+      else if (existingName) {
+        alert("Username has been taken. Please enter another username.");
+      }
+
       else {
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://minigamefps-5ce1.restdb.io/rest/basicaiming",
+            "url": "https://minigamefps-5ce1.restdb.io/rest/precisionaiming",
             "method": "POST",
             "headers": {
             "content-type": "application/json",
@@ -151,6 +156,7 @@ $(document).ready(function () {
         $.ajax(settings).done(function (response) {
             $("#submit-score").prop("disabled", false);
             getContacts();
+
         });
       }
   });
@@ -159,7 +165,7 @@ $(document).ready(function () {
     let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://minigamefps-5ce1.restdb.io/rest/basicaiming?q={}&sort=score&dir=-1",
+        "url": "https://minigamefps-5ce1.restdb.io/rest/precisionaiming?q={}&sort=score&dir=-1",
         "method": "GET",
         "headers": {
         "content-type": "application/json",
@@ -179,6 +185,12 @@ $(document).ready(function () {
         }
 
         $("#user-list tbody").html(content);
+        for (var i = 0; i < response.length; i++) {
+          if (response[i].userName === $("#name").val()) {
+            existingName = true;
+            break;
+          }
+        }
     });
   }
 

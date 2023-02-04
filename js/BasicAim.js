@@ -108,20 +108,16 @@ function changeStyle(value){
 }
 
 $(document).ready(function () {
-  const APIKEY = "63de211e3bc6b255ed0c463c";
-  getContacts();
-  $("#submit-score").on("click", function(e) {
+  const APIKEY = "63de50323bc6b255ed0c4656";
+  let existingName = false;
+  getUsers();
+  $("#submit-score-button").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
       let userScore = score;
       let userDate = Date();
 
-      let jsondata = {
-      "name": userName,
-      "score": userScore,
-      "date": userDate
-      };
-
+      getUsers();
       if (userName == "" || userName == null)
       {
         alert("You must input a name!");
@@ -133,6 +129,12 @@ $(document).ready(function () {
       }
 
       else {
+        let jsondata = {
+          "name": userName,
+          "score": userScore,
+          "date": userDate
+        };
+
         let settings = {
             "async": true,
             "crossDomain": true,
@@ -152,12 +154,12 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (response) {
             $("#submit-score").prop("disabled", false);
-            getContacts();
+            getUsers();
         });
       }
-  });
+  })
 
-  function getContacts(limit = 10, all = true) {
+  function getUsers(limit = 10, all = true) {
     let settings = {
         "async": true,
         "crossDomain": true,
@@ -171,17 +173,30 @@ $(document).ready(function () {
     }
 
     $.ajax(settings).done(function (response) {
-        //console.log(response);
-        let content = "";
-        for (var i = 0; i < response.length && i < limit; i++)
-        {
-          content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
-          <td>${response[i].score}</td>
-          <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+        for (var i = 0; i < response.length; i++) {
+          if (response[i].name === $("#name").val()) {
+            existingName = true;
+            break;
+          }
         }
 
-        $("#user-list tbody").html(content);
-    });
+        if (existingName) {
+          alert("Username already exists. Please enter another username.");
+        }
+        
+        else {
+          let content = "";
+          for (var i = 0; i < response.length && i < limit; i++)
+          {
+            content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+            <td>${response[i].score}</td>
+            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+          }
+
+          $("#user-list tbody").html(content);
+        }
+        existingName = false;
+    })
   }
 
 });

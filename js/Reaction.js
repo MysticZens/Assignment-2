@@ -79,8 +79,8 @@ gameArea.style.backgroundColor = "red";
 
 
 $(document).ready(function () {
-  const APIKEY = "63de211e3bc6b255ed0c463c";
-  getContacts();
+  const APIKEY = "63de50323bc6b255ed0c4656";
+  getUsers();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
@@ -103,7 +103,12 @@ $(document).ready(function () {
         alert("Your name must be at least 8 characters or more.");
       }
 
+      else if (existingName) {
+        alert("Username has been taken. Please enter another username.");
+      }
+
       else {
+        console.log(existingName);  
         let settings = {
             "async": true,
             "crossDomain": true,
@@ -124,12 +129,12 @@ $(document).ready(function () {
         $.ajax(settings).done(function (response) {
             console.log(response);
             $("#submit-score").prop("disabled", false);
-            getContacts();
+            getUsers();
         });
       }
   });
 
-  function getContacts(limit = 10, all = true) {
+  function getUsers(limit = 10, all = true) {
       let settings = {
           "async": true,
           "crossDomain": true,
@@ -153,6 +158,13 @@ $(document).ready(function () {
           }
 
           $("#user-list tbody").html(content);
+
+          for (var i = 0; i < response.length; i++) {
+            if (response[i].userName === $("#name").val()) {
+              existingName = true;
+              break;
+            }
+          }
       });
   }
 })
