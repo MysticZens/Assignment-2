@@ -36,7 +36,7 @@ startButton.addEventListener("click", function() {
       countdown.innerHTML = `Time remaining: ${timeLeft}`;
       if (timeLeft === 0) {
         clearInterval(intervalId);
-        countdown.innerHTML = `Time's up! Final score: ${clicks}`;
+        countdown.innerHTML = `Time's up!`;
         document.getElementById("final-score-value").innerHTML = clicks;
         document.getElementById("end-game").style.display = "block";
         document.getElementById("play-again-button").addEventListener("click", playAgain);

@@ -1,7 +1,22 @@
 /* Game Stuff */
-#countdown{
-    color: white;
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#score{
+    margin-left:15% ;
+}
+#countdown {
+    width: 22%;
+    margin: 0 39% 0 39%;
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
 }
 #counter{
     text-align: center;
@@ -53,6 +68,7 @@
     text-shadow: 0px 0px 10px gray;
 }
 #end-game {
+    position: absolute;
     background-color: white;
     box-shadow: 0px 0px 10px 0px #ccc;
     border-radius: 10px;
@@ -109,8 +125,6 @@
 #submission-menu{
     z-index: 2;
     position: absolute;
-    left: 25%;
-    bottom: 20%;
     background-color: white;
     box-shadow: 0px 0px 10px 0px #ccc;
     border-radius: 10px;
