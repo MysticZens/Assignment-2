@@ -1,13 +1,14 @@
 /* Game Stuff */
+#countdown{
+    color: white;
+}
 #game-area {
-    width: 300px;
+    width: 80%;
+    margin: 0 10% 0 10%;
     height: 300px;
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 0px 10px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
     font-weight: bold;
     transition: all 0.1s;
@@ -15,21 +16,25 @@
 }
 
 #game-area:active {
-    background-color: greenyellow;
+    background-color: black;
     transform: scale(0.9);
     box-shadow: 0px 0px 20px gray;
 }
 
 #start-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: dodgerblue;
-    color: white;
-    border-radius: 10px;
-    font-size: 20px;
+    position: absolute;
+    left: 46%;
+    bottom: 1%;
+    width: 8%;
+    color: black;
+    background-color: white;
+    padding: 1% 1% 1% 1%;
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0px #ccc;
     cursor: pointer;
-    box-shadow: 0px 0px 10px gray;
-    transition: all 0.1s;
+    text-align: center;
 }
 
 #start-button:active {
