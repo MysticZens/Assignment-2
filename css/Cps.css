@@ -2,19 +2,47 @@
 #game-area {
     width: 300px;
     height: 300px;
-    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.1s;
+    cursor: pointer;
 }
-  
+
+#game-area:active {
+    background-color: greenyellow;
+    transform: scale(0.9);
+    box-shadow: 0px 0px 20px gray;
+}
+
 #start-button {
     padding: 10px 20px;
     margin-top: 20px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px gray;
+    transition: all 0.1s;
 }
-  
+
+#start-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 20px black;
+}
+
 #score {
     margin-top: 20px;
     font-size: 20px;
+    color: dodgerblue;
+    text-shadow: 0px 0px 10px gray;
 }
-
 
 /* End game stuff */
 .a{
