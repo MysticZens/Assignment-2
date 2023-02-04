@@ -64,7 +64,7 @@
   
 #final-score {
     color: #333;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -133,6 +133,14 @@
 }
 #close:hover{
     color: red;
+}
+#end-game:active{
+    transform: scale(1);
+    box-shadow: 0px 0px 20px gray;
+}
+#submission-menu:active{
+    transform: scale(1);
+    box-shadow: 0px 0px 20px gray;
 }
 /* End game stuff */
 .a{

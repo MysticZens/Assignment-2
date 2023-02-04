@@ -4,6 +4,7 @@ const startButton = document.getElementById("start-button");
 const score = document.getElementById("score");
 
 document.getElementById("end-game").style.display = "none";
+document.getElementById("submission-menu").style.display = "none";
 
 let clicks = 0;
 let timeLeft = 10;
@@ -54,4 +55,11 @@ function playAgain() {
     startButton.style.display = "inline-block";
 }
 
-function displaySubmit()
+function DisplaySubmit(){
+    document.getElementById("end-game").style.display = "none";
+    document.getElementById("submission-menu").style.display = "block";
+}
+function CancelSubmit(){
+    document.getElementById("end-game").style.display = "block";
+    document.getElementById("submission-menu").style.display = "none";
+}
