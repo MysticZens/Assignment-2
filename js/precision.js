@@ -99,11 +99,9 @@ function toggleMenu(){
 //Functions for color change
 function changeStyle(value){
   var stylesheet = document.styleSheets[1];
-  var outerCircleRule = stylesheet.cssRules[0];
-  var innerCircleRule = stylesheet.cssRules[2];
+  var CircleRule = stylesheet.cssRules[0];
 
-  outerCircleRule.style.backgroundColor = value;
-  innerCircleRule.style.backgroundColor = value;
+  CircleRule.style.backgroundColor = value;
   alert("Color Changed Successfully")
 }
 
