@@ -2,6 +2,9 @@
 #countdown{
     color: white;
 }
+#counter{
+    text-align: center;
+}
 #game-area {
     width: 80%;
     margin: 0 10% 0 10%;
@@ -17,14 +20,14 @@
 
 #game-area:active {
     background-color: black;
-    transform: scale(0.9);
+    transform: scale(0.95);
     box-shadow: 0px 0px 20px gray;
 }
 
 #start-button {
     position: absolute;
     left: 46%;
-    bottom: 1%;
+    margin-top: 1%;
     width: 8%;
     color: black;
     background-color: white;
@@ -105,4 +108,11 @@
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+}
+
+/* Prevent select */
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }

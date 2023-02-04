@@ -16,15 +16,16 @@ gameArea.addEventListener("click", function() {
 
 startButton.addEventListener("click", function() {
   startButton.style.display = "none";
-  countdown.innerHTML = "Time remaining: 3";
+  counter.innerHTML = "3";
   setTimeout(function() {
-    countdown.innerHTML = "Time remaining: 2";
+    counter.innerHTML = "2";
   }, 1000);
   setTimeout(function() {
-    countdown.innerHTML = "Time remaining: 1";
+    counter.innerHTML = "1";
   }, 2000);
   setTimeout(function() {
     gameStarted = true;
+    counter.innerHTML = "GO!";
     countdown.innerHTML = `Time remaining: ${timeLeft}`;
     intervalId = setInterval(function() {
       timeLeft--;
