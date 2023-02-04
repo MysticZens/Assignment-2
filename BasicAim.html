@@ -38,7 +38,7 @@ background-attachment: fixed;">
         <span id="close" onclick="cancelsubmit()">&times;</span>
         <div id="final-score">Your Final Score: <span id="final-score-values"></span></div>
         <p style="color: black;">Enter the name you want to display!</p>
-        <input type="text" id="name" required>
+        <input type="text" id="name" required unique>
         <div id="submit-score-button">
         <input type="submit" id="submit-score">
         </div>
@@ -99,7 +99,7 @@ background-attachment: fixed;">
       <thead>
         <th>Name</th>
         <th>Score</th>
-        <th>Date of scoreboard</th>
+        <th>Date of record</th>
       </thead>
       
       <tbody></tbody>
@@ -124,9 +124,9 @@ background-attachment: fixed;">
   <script src="https://kit.fontawesome.com/8216e8d135.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <script src="js/moment.js"></script>
   <script src="js/w3-include-header.js"></script>
   <script src="js/BasicAim.js"></script>
-  <!--script src="js/BasicAimAPI.js"></script-->
   
 </body>
 </html>

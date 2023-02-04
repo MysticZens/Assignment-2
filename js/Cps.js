@@ -63,3 +63,82 @@ function CancelSubmit(){
     document.getElementById("end-game").style.display = "block";
     document.getElementById("submission-menu").style.display = "none";
 }
+
+$(document).ready(function () {
+  const APIKEY = "63de211e3bc6b255ed0c463c";
+  getContacts();
+  $("#submit-score").on("click", function(e) {
+      e.preventDefault();
+      let userName = $("#name").val();
+      let userScore = clicks;
+      let userDate = Date();
+
+      let jsondata = {
+      "name": userName,
+      "score": userScore,
+      "date": userDate
+      };
+
+      if (userName == "")
+      {
+      alert("You must input a name!");
+      }
+
+      else if (userName.length > 8)
+      {
+        alert("Your name must be at least 8 characters or more.");
+      }
+
+      else {
+      let settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://minigamefps-5ce1.restdb.io/rest/clickspersecond",
+          "method": "POST",
+          "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+          },
+          "processData": false,
+          "data": JSON.stringify(jsondata),
+          "beforeSend": function() {
+          $("submit-score").prop("disabled", true);
+          }
+      }
+
+      $.ajax(settings).done(function (response) {
+          console.log(response);
+          $("#submit-score").prop("disabled", false);
+          getContacts();
+      });
+      }
+  });
+
+  function getContacts(limit = 10, all = true) {
+      let settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://minigamefps-5ce1.restdb.io/rest/clickspersecond?q={}&sort=score&dir=-1",
+          "method": "GET",
+          "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+          },
+      }
+
+      $.ajax(settings).done(function (response) {
+          console.log(response);
+          let content = "";
+          for (var i = 0; i < response.length && i < limit; i++)
+          {
+            content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+            <td>${response[i].score}</td>
+            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+          }
+
+          $("#user-list tbody").html(content);
+      });
+  }
+})
