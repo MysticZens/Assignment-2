@@ -4,6 +4,7 @@
 	background-color: white ;
 	padding: 2rem;
 	width: 50%;
+  border-radius: 5px;
 	text-align: center;
 }
 .review-store{
@@ -117,6 +118,18 @@ textarea {
   transition: all 0.3s ease;
 }
 /* End name */
+#close {
+  color: #333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 0 8px 8px 8px;
+}
+#close:hover{
+  color: red;
+}
 /* Review form end */
 .a{
   border:3px solid green;
