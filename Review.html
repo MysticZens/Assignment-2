@@ -26,7 +26,24 @@ background-attachment: fixed;">
   <div class="a top">
     <div id="review-button" onclick="ReviewDisplay()">Make a Review Here!</div>
   </div>
-
+  <div class="wrapper">
+		<h3>Rate our website!</h3>
+		<form action="#">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class="fa-solid fa-star" style="--i: 0;"></i>
+				<i class="fa-solid fa-star" style="--i: 1;"></i>
+				<i class="fa-solid fa-star" style="--i: 2;"></i>
+				<i class="fa-solid fa-star" style="--i: 3;"></i>
+				<i class="fa-solid fa-star" style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
 
   <div class="footer">
     <h6>© Copyright 2021-2023 FPS Practice All Rights Reserved.</h6>
