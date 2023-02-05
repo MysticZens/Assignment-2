@@ -89,6 +89,11 @@ function cancelsubmit(){
   document.getElementById("submission-menu").style.display = "none";
   document.getElementById("end-game").style.display = "block";
 }
+
+function playagain(){
+  document.getElementById("end-game").style.display = "none";
+  document.getElementById("start-button").style.display = "block";
+}
 // Functions for drop down
 let subMenu = document.getElementById("subMenu");
 

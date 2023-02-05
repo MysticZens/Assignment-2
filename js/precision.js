@@ -10,7 +10,7 @@ function startGame() {
   document.getElementById("start-button").style.display = "none";
   document.getElementById("end-game").style.display = "none";
   score = 0;
-  time = 20;
+  time = 1;
   document.getElementById("score").innerHTML = score;
   document.getElementById("time").innerHTML = time;
   intervalId = setInterval(countdown, 1000);
@@ -88,6 +88,11 @@ function displaySubmit(){
 function cancelsubmit(){
   document.getElementById("submission-menu").style.display = "none";
   document.getElementById("end-game").style.display = "block";
+}
+
+function playagain(){
+  document.getElementById("end-game").style.display = "none";
+  document.getElementById("start-button").style.display = "block";
 }
 // Functions for drop down
 let subMenu = document.getElementById("subMenu");

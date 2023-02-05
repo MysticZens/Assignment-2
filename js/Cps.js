@@ -7,7 +7,7 @@ document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
 
 let clicks = 0;
-let timeLeft = 10;
+let timeLeft = 1;
 let intervalId;
 let gameStarted = false;
 
