@@ -21,3 +21,9 @@ allStar.forEach((item, idx)=> {
 		}
 	})
 })
+
+document.getElementById("review-form").style.display = "none";
+
+function ReviewDisplay(){
+    document.getElementById("review-form").style.display = "block";
+}
