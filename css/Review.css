@@ -1,7 +1,7 @@
 /* Review form */
 .container{
   position: relative;
-  width: 40%;
+  width: 400px;
   background: #111;
   padding: 20px 30px;
   border: 1px solid #444;
@@ -166,4 +166,19 @@ form .btn button:hover{
 #review-button:hover{
   background-color: red;
   box-shadow: 0px 0px 10px 0px red;
+}
+/* Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
 }
