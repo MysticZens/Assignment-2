@@ -1,3 +1,35 @@
+/* Review form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  
+  label, input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  #reviews {
+    padding: 20px;
+    background-color: lightblue;
+  }
+  
+  .fa-star {
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+  }
+  
+  .fa-star.fa-solid {
+    color:  yellow;
+  }
+  
+/* Review form end */
 .a{
     border:3px solid green;
 }
