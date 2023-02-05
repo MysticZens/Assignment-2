@@ -12,3 +12,5 @@ btn.onclick = ()=>{
   }
   return false;
 }
+
+document.getElementById("review").style.display = "none";

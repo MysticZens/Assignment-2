@@ -1,7 +1,6 @@
 /* Review form */
 .container{
   position: relative;
-  width: 400px;
   background: #111;
   padding: 20px 30px;
   border: 1px solid #444;
@@ -121,11 +120,10 @@ form .btn button{
 }
 form .btn button:hover{
   background: #1b1b1b;
-}
-  
+} 
 /* Review form end */
 .a{
-    border:3px solid green;
+  border:3px solid green;
 }
 .footer {
     text-align: center;
@@ -155,8 +153,9 @@ form .btn button:hover{
 #review-button {
   color: black;
   background-color: white;
+  width: 15%;
   padding: 2% 1% 2% 1%;
-  font-size: 2vh;
+  font-size: 1vw;
   font-weight: bold;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 0px #ccc;
@@ -166,6 +165,10 @@ form .btn button:hover{
 #review-button:hover{
   background-color: red;
   box-shadow: 0px 0px 10px 0px red;
+}
+.top{
+  display: flex;
+  justify-content: center;
 }
 /* Animation */
 .animate {
