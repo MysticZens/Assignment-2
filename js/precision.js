@@ -10,7 +10,7 @@ function startGame() {
   document.getElementById("start-button").style.display = "none";
   document.getElementById("end-game").style.display = "none";
   score = 0;
-  time = 1;
+  time = 20;
   document.getElementById("score").innerHTML = score;
   document.getElementById("time").innerHTML = time;
   intervalId = setInterval(countdown, 1000);

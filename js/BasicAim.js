@@ -111,7 +111,7 @@ $(document).ready(function () {
   const APIKEY = "63de50323bc6b255ed0c4656";
   let existingName = false;
   getUsers();
-  $("#submit-score-button").on("click", function(e) {
+  $("#submit-score").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
       let userScore = score;
