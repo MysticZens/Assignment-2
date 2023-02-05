@@ -114,8 +114,7 @@ function changeStyle(value){
 
 $(document).ready(function () {
   const APIKEY = "63de50323bc6b255ed0c4656";
-  let existingName = false;
-  getUsers();
+  displayUsers();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
@@ -159,12 +158,11 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (response) {
             $("#submit-score").prop("disabled", false);
-            getUsers();
         });
       }
   })
 
-  function getUsers(limit = 10, all = true) {
+  function getUsers(all = true) {
     let settings = {
         "async": true,
         "crossDomain": true,
@@ -175,32 +173,20 @@ $(document).ready(function () {
         "x-apikey": APIKEY,
         "cache-control": "no-cache"
         },
-    }
+    }   
 
     $.ajax(settings).done(function (response) {
-        for (var i = 0; i < response.length; i++) {
-          if (response[i].name === $("#name").val()) {
-            existingName = true;
-            break;
-          }
-        }
+      $("#submit-score").prop("disabled", false);
+      let limit = 10;
+      let content = "";
+      for (var i = 0; i < response.length && i < limit; i++)
+      {
+        content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+        <td>${response[i].score}</td>
+        <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+      }
 
-        if (existingName) {
-          alert("Username already exists. Please enter another username.");
-        }
-        
-        else {
-          let content = "";
-          for (var i = 0; i < response.length && i < limit; i++)
-          {
-            content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
-            <td>${response[i].score}</td>
-            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
-          }
-
-          $("#user-list tbody").html(content);
-        }
-        existingName = false;
+      $("#user-list tbody").html(content);
     })
   }
 
