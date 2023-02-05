@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class = "parent" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,111 +11,106 @@
     <script src="https://kit.fontawesome.com/8216e8d135.js" crossorigin="anonymous"></script>
     <title>Minigame Practice (FPS)</title>
 </head>
-<body style="width: 100%;
-min-height: 100vh;
-background-image: url(imgs/starfall.gif);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;">
-  <div w3-include-header="header.html"></div> 
-  <br>
-  <div class="a back-button">
-    <a href = "index.html"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Basic Aiming</a>
-  </div>
-  <br>
-  <br>
-  <div class="a game">
-
-    <div id = "game-area">
-      <div class = "animate" id="start-button" onclick="startGame()">Start Game</div>
-      <div id="end-game" class = "animate">
-        <div id="final-score">Final Score: <span id="final-score-value"></span></div>
-        <div id="play-again-button" onclick="playagain()">Play Again</div>
-        <div id="submit-button" onclick="displaySubmit()">Submit Your Score!</div>
-      </div>
-      <div id="submission-menu" class = "animate">
-        <span id="close" onclick="cancelsubmit()">&times;</span>
-        <div id="final-score">Your Final Score: <span id="final-score-values"></span></div>
-        <p style="color: black;">Enter the name you want to display!</p>
-        <input type="text" id="name" required unique>
-        <div id="submit-score-button">
-        <input type="submit" id="submit-score">
-        </div>
-        <p style="color: black;">You are about to submit this into the leaderboard!</p>
-      </div>
+<body>
+    <iframe class = "background" src="Stars.html" frameborder="0" scrolling="no"></iframe>
+    <div w3-include-header="header.html"></div> 
+    <br>
+    <div class="a back-button">
+      <a href = "index.html"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Basic Aiming</a>
     </div>
+    <br>
+    <br>
+    <div class="a game">
 
-    <div class="a score-time-color">
-      <div class="a score-time-display">
-        <div id="scoreboard">
-          &nbsp;&nbsp;&nbsp;Score: <span id="score">0</span>
+      <div id = "game-area">
+        <div class = "animate" id="start-button" onclick="startGame()">Start Game</div>
+        <div id="end-game" class = "animate">
+          <div id="final-score">Final Score: <span id="final-score-value"></span></div>
+          <div id="play-again-button" onclick="playagain()">Play Again</div>
+          <div id="submit-button" onclick="displaySubmit()">Submit Your Score!</div>
+        </div>
+        <div id="submission-menu" class = "animate">
+          <span id="close" onclick="cancelsubmit()">&times;</span>
+          <div id="final-score">Your Final Score: <span id="final-score-values"></span></div>
+          <p style="color: black;">Enter the name you want to display!</p>
+          <input type="text" id="name" required unique>
+          <div id="submit-score-button">
+          <input type="submit" id="submit-score">
           </div>
-        <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
-        <div id="time-checker">
-            Time Remaining: <span id="time">20</span>
+          <p style="color: black;">You are about to submit this into the leaderboard!</p>
         </div>
       </div>
-      <div class="a color-change">
-        <p onclick="toggleMenu()"><i class="fa-solid fa-palette"></i>&nbsp;Target Color</p>
+
+      <div class="a score-time-color">
+        <div class="a score-time-display">
+          <div id="scoreboard">
+            &nbsp;&nbsp;&nbsp;Score: <span id="score">0</span>
+            </div>
+          <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+          <div id="time-checker">
+              Time Remaining: <span id="time">20</span>
+          </div>
+        </div>
+        <div class="a color-change">
+          <p onclick="toggleMenu()"><i class="fa-solid fa-palette"></i>&nbsp;Target Color</p>
+        </div>
+      </div>
+
+      <div class="sub-menu-wrap" id = "subMenu">
+        <div class="sub-menu">
+                
+            <div id = "red" class="sub-menu-link">
+              <p onclick="changeStyle('red'),toggleMenu()">Red</p>
+            </div>
+
+            <div id = "green" class="sub-menu-link">
+              <p onclick="changeStyle('green'),toggleMenu()">Green</p>
+            </div>
+
+            <div id = "yellow" class="sub-menu-link">
+              <p onclick="changeStyle('yellow'),toggleMenu()">Yellow</p>
+            </div>
+                
+            <div id = "blue" class="sub-menu-link">
+              <p onclick="changeStyle('blue'),toggleMenu()">Blue</p>
+            </div>
+              
+            <div id = "black" class="sub-menu-link">
+              <p onclick="changeStyle('black'),toggleMenu()">Black</p>
+            </div>
+                
+            <div id = "pink" class="sub-menu-link">
+              <p onclick="changeStyle('pink'),toggleMenu()">Pink</p>
+            </div>
+
+        </div>
       </div>
     </div>
-
-    <div class="sub-menu-wrap" id = "subMenu">
-      <div class="sub-menu">
-              
-          <div id = "red" class="sub-menu-link">
-            <p onclick="changeStyle('red'),toggleMenu()">Red</p>
-          </div>
-
-          <div id = "green" class="sub-menu-link">
-            <p onclick="changeStyle('green'),toggleMenu()">Green</p>
-          </div>
-
-          <div id = "yellow" class="sub-menu-link">
-            <p onclick="changeStyle('yellow'),toggleMenu()">Yellow</p>
-          </div>
-              
-          <div id = "blue" class="sub-menu-link">
-            <p onclick="changeStyle('blue'),toggleMenu()">Blue</p>
-          </div>
-            
-          <div id = "black" class="sub-menu-link">
-            <p onclick="changeStyle('black'),toggleMenu()">Black</p>
-          </div>
-              
-          <div id = "pink" class="sub-menu-link">
-            <p onclick="changeStyle('pink'),toggleMenu()">Pink</p>
-          </div>
-
+    <br><br>
+    <div class="a leaderboard-area">
+      <h2>Global leaderboard</h2>
+      <div class="leaderboard"> 
+      <table class="table" id="user-list">
+        <thead>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Date of record</th>
+        </thead>
+        
+        <tbody></tbody>
+      </table>
       </div>
     </div>
-  </div>
-  <br><br>
-  <div class="a leaderboard-area">
-    <h2>Global leaderboard</h2>
-    <div class="leaderboard"> 
-    <table class="table" id="user-list">
-      <thead>
-        <th>Name</th>
-        <th>Score</th>
-        <th>Date of record</th>
-      </thead>
-      
-      <tbody></tbody>
-    </table>
+    
+    <br><br>
+    <div class="a about-game">
+      <h2>Basic Aiming</h2>
+      <p>Information about the game</p>
     </div>
-  </div>
-  
-  <br><br>
-  <div class="a about-game">
-    <h2>Basic Aiming</h2>
-    <p>Information about the game</p>
-  </div>
-  
-  <div class="footer">
-    <h6>© Copyright 2021-2023 FPS Practice All Rights Reserved.</h6>
-  </div>
+    
+    <div class="footer">
+      <h6>© Copyright 2021-2023 FPS Practice All Rights Reserved.</h6>
+    </div>
   
   <!--Default bootstrap-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
