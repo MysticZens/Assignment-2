@@ -3,6 +3,7 @@ var time = 20;
 var intervalId;
 var circle;
 var objectArray = Array();
+
 document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
 

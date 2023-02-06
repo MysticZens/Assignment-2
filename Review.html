@@ -22,7 +22,6 @@
   </div>
   <div id = "review-keep" class="review-store">
     <div id = "review-form" class="wrapper animation">
-      <span id="close" onclick="CancelSubmit()">&times;</span>
       <h3>Rate our website!</h3>
       <form action="#">
         <div class="input-data">
@@ -42,7 +41,7 @@
         <textarea id="comment" name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
         <div class="btn-group">
           <button type="submit" id="submit-review" class="btn submit">Submit</button>
-          <button class="btn cancel">Cancel</button>
+          <button onclick="CancelSubmit()" class="btn cancel">Cancel</button>
         </div>
       </form>
     </div>
