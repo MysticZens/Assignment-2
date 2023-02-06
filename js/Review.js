@@ -86,7 +86,7 @@ $(document).ready(function () {
 		let settings = {
 			"async": true,
 			"crossDomain": true,
-			"url": "https://minigamefps-5bb0.restdb.io/rest/review",
+			"url": "https://minigamefps-5bb0.restdb.io/rest/review?q={}&sort=rank&dir=-1",
 			"method": "GET",
 			"headers": {
 			"content-type": "application/json",
