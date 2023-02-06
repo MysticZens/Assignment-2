@@ -225,11 +225,11 @@
 /* End game display end */
 /* Dropdown stuff */
 .sub-menu-wrap{
-    z-index: 4;
-    position: absolute;
-    top: 700px;
-    right: 12%;
+    z-index: 2;
     width: 120px;
+    position: absolute;
+    margin-top: -5%;
+    right: 9%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
