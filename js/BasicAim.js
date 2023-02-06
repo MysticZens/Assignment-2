@@ -114,14 +114,13 @@ function changeStyle(value){
 
 $(document).ready(function () {
   const APIKEY = "63de50323bc6b255ed0c4656";
-  displayUsers();
+  getUsers();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
       let userScore = score;
       let userDate = Date();
 
-      getUsers();
       if (userName == "" || userName == null)
       {
         alert("You must input a name!");
@@ -158,6 +157,7 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (response) {
             $("#submit-score").prop("disabled", false);
+            getUsers();
         });
       }
   })

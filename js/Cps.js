@@ -67,7 +67,7 @@ function CancelSubmit(){
 $(document).ready(function () {
   const APIKEY = "63de50323bc6b255ed0c4656";
   let existingName = false;
-  getContacts();
+  getUsers();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
       let userName = $("#name").val();
@@ -115,12 +115,12 @@ $(document).ready(function () {
       $.ajax(settings).done(function (response) {
           console.log(response);
           $("#submit-score").prop("disabled", false);
-          getContacts();
+          getUsers();
       });
       }
   });
 
-  function getContacts(limit = 10, all = true) {
+  function getUsers(limit = 10, all = true) {
       let settings = {
           "async": true,
           "crossDomain": true,
@@ -144,13 +144,6 @@ $(document).ready(function () {
           }
 
           $("#user-list tbody").html(content);
-
-          for (var i = 0; i < response.length; i++) {
-            if (response[i].userName === $("#name").val()) {
-              existingName = true;
-              break;
-            }
-          }
       });
   }
 })

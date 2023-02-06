@@ -103,12 +103,7 @@ $(document).ready(function () {
         alert("Your name must be at least 8 characters or more.");
       }
 
-      else if (existingName) {
-        alert("Username has been taken. Please enter another username.");
-      }
-
-      else {
-        console.log(existingName);  
+      else {        
         let settings = {
             "async": true,
             "crossDomain": true,
@@ -158,13 +153,6 @@ $(document).ready(function () {
           }
 
           $("#user-list tbody").html(content);
-
-          for (var i = 0; i < response.length; i++) {
-            if (response[i].userName === $("#name").val()) {
-              existingName = true;
-              break;
-            }
-          }
       });
   }
 })
