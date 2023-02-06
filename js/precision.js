@@ -86,7 +86,7 @@ function displaySubmit(){
   document.getElementById("submission-menu").style.display = "block";
 }
 
-function cancelsubmit(){
+function CancelSubmit(){
   document.getElementById("submission-menu").style.display = "none";
   document.getElementById("end-game").style.display = "block";
 }
