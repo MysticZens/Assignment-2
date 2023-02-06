@@ -236,3 +236,7 @@
     z-index: -1;
     border: none;
 }
+
+tbody {
+    color: white;
+}
