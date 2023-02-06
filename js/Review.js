@@ -98,11 +98,19 @@ $(document).ready(function () {
   
 		$.ajax(settings).done(function (response) {
 			let content = "";
+
 			for (var i = 0; i < response.length && i < limit; i++)
 			{
-			  content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
-			  <td>${response[i].rank}</td>
-			  <td>${response[i].message}</td></tr>`
+				const starsContainer = document.querySelector('.rating');
+				const star = '<i class="fa-solid fa-star" style="--i: 0;"></i>';
+				const repeat = response[i].rank;
+				for (let i = 0; i < repeat; i++) {
+					starsContainer.innerHTML += star;
+				}
+
+				content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+				<td>` + star + `</td>
+				<td>${response[i].message}</td></tr>`
 			}
   
 			$("#user-list tbody").html(content);
