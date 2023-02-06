@@ -162,14 +162,17 @@ textarea {
     text-decoration: none;
 }
 #review-button {
-  padding-top: 1.5%;
+  padding: 1.5% 1% 0 1%;
   color: white;
+  border-radius: 50px;
   transform: translateY(0);
   transition: 0.3s;
 }
 #review-button:hover{
   cursor: pointer;
   transform: translateY(-5px);
+  box-shadow: 0px 0px 10px 0px powderblue;
+  color: whitesmoke;
 }
 .top{
   display: flex;
@@ -200,13 +203,16 @@ tbody i {
   color: yellow;
 }
 .rating-dropdown {
-  padding-top: 1.5%;
+  padding: 1.5% 1% 0 1%;
   color: white;
+  border-radius: 50px;
   transform: translateY(0);
   transition: 0.3s;
 }
 .rating-dropdown:hover{
+  color: white;
   cursor: pointer;
+  box-shadow: 0px 0px 10px 0px yellow;
   transform: translateY(-5px);
 }
 /* Dropdown */
@@ -215,7 +221,7 @@ tbody i {
   width: 150px;
   position: absolute;
   margin-top: -2%;
-  right: 18.5%;
+  right: 17.5%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
