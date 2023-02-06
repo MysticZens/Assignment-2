@@ -19,7 +19,33 @@
     <a href = "index.html"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Reviews</a>
   </div>
   <div class="a top">
-    <div id="review-button" onclick="ReviewDisplay()">Make a Review Here!</div>
+    <div id="review-button" onclick="ReviewDisplay()"><p>Make a Review Here!</p></div>
+    <div class = "rating-dropdown"><p onclick="toggleMenu()"><i class="fa-solid fa-star"></i>&nbsp;Rating Filters!</p></div>
+  </div>
+  <div class="sub-menu-wrap" id = "subMenu">
+    <div class="sub-menu">
+            
+        <div id = "red" class="sub-menu-link">
+          <p><i class="fa-solid fa-star"></i></p>
+        </div>
+
+        <div id = "green" class="sub-menu-link">
+          <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        </div>
+
+        <div id = "yellow" class="sub-menu-link">
+          <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        </div>
+            
+        <div id = "blue" class="sub-menu-link">
+          <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        </div>
+          
+        <div id = "black" class="sub-menu-link">
+          <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        </div>
+
+    </div>
   </div>
   <div id = "review-keep" class="review-store">
     <div id = "review-form" class="wrapper animation">
@@ -57,6 +83,12 @@
         <th>Message</th>
       </thead>
       <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="a about-review">
+    <h2>Review</h2>
+    <p>Information about the game</p>
   </div>
 
   <div class="footer">

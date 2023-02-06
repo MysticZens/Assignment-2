@@ -54,7 +54,7 @@
 }
 textarea {
 	width: 100%;
-	background: var(--light);
+	background: lightcyan;
 	padding: 1rem;
 	border-radius: .5rem;
 	border: none;
@@ -77,18 +77,20 @@ textarea {
 	font-weight: 500;
 }
 .btn-group .btn.submit {
-	background: var(--blue);
-	color: var(--white);
+	background: white;
+	color: blue;
 }
 .btn-group .btn.submit:hover {
-	background: var(--blue-d-1);
+	background: green;
+  color: white;
 }
 .btn-group .btn.cancel {
-	background: var(--white);
-	color: var(--blue);
+	background: white;
+	color: blue;
 }
 .btn-group .btn.cancel:hover {
-	background: var(--light);
+	background: red;
+  color: white;
 }
 /* Name */
 .wrapper .input-data{
@@ -160,24 +162,18 @@ textarea {
     text-decoration: none;
 }
 #review-button {
-  color: black;
-  background-color: white;
-  width: 15%;
-  padding: 2% 1% 2% 1%;
-  font-size: 1vw;
-  font-weight: bold;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px 0px #ccc;
-  cursor: pointer;
-  text-align: center;
+  padding-top: 1.5%;
+  color: white;
+  transform: translateY(0);
+  transition: 0.3s;
 }
 #review-button:hover{
-  background-color: red;
-  box-shadow: 0px 0px 10px 0px red;
+  cursor: pointer;
+  transform: translateY(-5px);
 }
 .top{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .centring{
   display: flex;
@@ -190,6 +186,72 @@ textarea {
   margin: 0 5% 0 5%;
   text-align: center;
 }
+.about-review{
+  color: white;
+  text-align: center;
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
+tbody {
+  color: white;
+}
+
+tbody i {
+  color: yellow;
+}
+.rating-dropdown {
+  padding-top: 1.5%;
+  color: white;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+.rating-dropdown:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+/* Dropdown */
+.sub-menu-wrap{
+  z-index: 2;
+  width: 150px;
+  position: absolute;
+  margin-top: -2%;
+  right: 18.5%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+/* Increases the max-height which will allow the dropdown menu to show itself */
+.sub-menu-wrap.open-menu{
+  z-index: 4;
+  max-height: 250px;
+}
+/* Giving the dropdown menu a backgroud color, padding and margin */
+.sub-menu{
+  background-color: rgba(4, 4, 58, 0.7);
+  padding: 20px;
+  margin: 10px;
+}
+/* Styling of links in the drop down menu */
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin: 12px 0;
+}
+/* Giving width to the text in dropdown menu */
+.sub-menu-link p{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* Giving an animation of 5px difference when a mouse hovers over the text  */
+.sub-menu-link:hover p{
+  cursor: pointer;
+  font-weight: 600;
+  color: yellow;
+}
+/* end dropdown */
 /* Animation */
 .animation {
   -webkit-animation: animatezoom 0.6s;
@@ -219,12 +281,4 @@ textarea {
   height: 100%;
   z-index: -1;
   border: none;
-}
-
-tbody {
-  color: white;
-}
-
-tbody i {
-  color: yellow;
 }
