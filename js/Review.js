@@ -33,7 +33,7 @@ function CancelSubmit() {
 }
 
 $(document).ready(function () {
-	const APIKEY = "63de50323bc6b255ed0c4656";
+	const APIKEY = "63e0ccba3bc6b255ed0c46f2";
 	getUsers();
 	$("#submit-review").on("click", function(e) {
 		e.preventDefault();
@@ -61,7 +61,7 @@ $(document).ready(function () {
 			let settings = {
 				"async": true,
 				"crossDomain": true,
-				"url": "https://minigamefps-5ce1.restdb.io/rest/review",
+				"url": "https://minigamefps-5bb0.restdb.io/rest/review",
 				"method": "POST",
 				"headers": {
 				"content-type": "application/json",
@@ -76,7 +76,6 @@ $(document).ready(function () {
 			}
   
 			$.ajax(settings).done(function (response) {
-				console.log(response);
 				$("#submit-review").prop("disabled", false);
 				getUsers();
 			});
@@ -87,7 +86,7 @@ $(document).ready(function () {
 		let settings = {
 			"async": true,
 			"crossDomain": true,
-			"url": "https://minigamefps-5ce1.restdb.io/rest/review",
+			"url": "https://minigamefps-5bb0.restdb.io/rest/review",
 			"method": "GET",
 			"headers": {
 			"content-type": "application/json",
@@ -101,10 +100,10 @@ $(document).ready(function () {
 
 			for (var i = 0; i < response.length && i < limit; i++)
 			{
-				const stars = `<i class="fa-solid fa-star" style="--i:${i}`
-				for (let index = 1; i < response[i].rank; i++) {
-					stars += `<i class="fa-solid fa-star" style="--i:${index}`
-					index += 1;
+				let stars = `<i class="fa-solid fa-star" style=":${i}"></i>`
+				let repeat = response[i].rank;
+				for (var index = 1; index < repeat; index++) {
+					stars += `<i class="fa-solid fa-star" style=":${index}"</i>`
 				}
 				content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
 				<td>` + stars + `</td>

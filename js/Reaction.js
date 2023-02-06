@@ -79,7 +79,7 @@ gameArea.style.backgroundColor = "red";
 
 
 $(document).ready(function () {
-  const APIKEY = "63de50323bc6b255ed0c4656";
+  const APIKEY = "63e0ccba3bc6b255ed0c46f2";
   getUsers();
   $("#submit-score").on("click", function(e) {
       e.preventDefault();
@@ -107,7 +107,7 @@ $(document).ready(function () {
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://minigamefps-5ce1.restdb.io/rest/reactiontime",
+            "url": "https://minigamefps-5bb0.restdb.io/rest/reactiontime",
             "method": "POST",
             "headers": {
             "content-type": "application/json",
@@ -133,7 +133,7 @@ $(document).ready(function () {
       let settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://minigamefps-5ce1.restdb.io/rest/reactiontime?q={}&sort=time&dir=1",
+          "url": "https://minigamefps-5bb0.restdb.io/rest/reactiontime?q={}&sort=time&dir=1",
           "method": "GET",
           "headers": {
           "content-type": "application/json",
