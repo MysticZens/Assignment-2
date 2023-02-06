@@ -224,3 +224,7 @@ textarea {
 tbody {
   color: white;
 }
+
+tbody i {
+  color: yellow;
+}

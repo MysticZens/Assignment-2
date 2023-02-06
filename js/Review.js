@@ -101,15 +101,13 @@ $(document).ready(function () {
 
 			for (var i = 0; i < response.length && i < limit; i++)
 			{
-				const starsContainer = document.querySelector('.rating');
-				const star = '<i class="fa-solid fa-star" style="--i: 0;"></i>';
-				const repeat = response[i].rank;
-				for (let i = 0; i < repeat; i++) {
-					starsContainer.innerHTML += star;
+				const stars = `<i class="fa-solid fa-star" style="--i:${i}`
+				for (let index = 1; i < response[i].rank; i++) {
+					stars += `<i class="fa-solid fa-star" style="--i:${index}`
+					index += 1;
 				}
-
 				content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
-				<td>` + star + `</td>
+				<td>` + stars + `</td>
 				<td>${response[i].message}</td></tr>`
 			}
   
