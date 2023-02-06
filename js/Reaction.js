@@ -103,7 +103,7 @@ $(document).ready(function () {
         alert("Your name must be at least 8 characters or more.");
       }
 
-      else {        
+      else {
         let settings = {
             "async": true,
             "crossDomain": true,
