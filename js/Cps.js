@@ -5,6 +5,8 @@ const score = document.getElementById("score");
 
 document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
+document.getElementById("score-load").style.display = "none";
+document.getElementById("confirm").style.display = "none";
 
 let clicks = 0;
 let timeLeft = 1;
@@ -95,55 +97,63 @@ $(document).ready(function () {
       }
 
       else {
-      let settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://minigamefps-5bb0.restdb.io/rest/clickspersecond",
-          "method": "POST",
-          "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-          },
-          "processData": false,
-          "data": JSON.stringify(jsondata),
-          "beforeSend": function() {
-          $("submit-score").prop("disabled", true);
-          }
-      }
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://minigamefps-5bb0.restdb.io/rest/clickspersecond",
+            "method": "POST",
+            "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata),
+            "beforeSend": function() {
+            $("submit-score").prop("disabled", true);
+            }
+        }
 
-      $.ajax(settings).done(function (response) {
-          console.log(response);
-          $("#submit-score").prop("disabled", false);
-          getUsers();
-      });
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $("#submit-score").prop("disabled", false);
+            getUsers();
+        });
       }
   });
 
   function getUsers(limit = 10, all = true) {
-      let settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://minigamefps-5bb0.restdb.io/rest/clickspersecond?q={}&sort=score&dir=-1",
-          "method": "GET",
-          "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-          },
-      }
+    document.getElementById("submission-menu").style.display = "none";
+    document.getElementById("score-load").style.display = "block";
+    let settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://minigamefps-5bb0.restdb.io/rest/clickspersecond?q={}&sort=score&dir=-1",
+        "method": "GET",
+        "headers": {
+        "content-type": "application/json",
+        "x-apikey": APIKEY,
+        "cache-control": "no-cache"
+        },
+    }
 
-      $.ajax(settings).done(function (response) {
-          console.log(response);
-          let content = "";
-          for (var i = 0; i < response.length && i < limit; i++)
-          {
-            content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
-            <td>${response[i].score}</td>
-            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
-          }
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        let content = "";
+        for (var i = 0; i < response.length && i < limit; i++)
+        {
+          content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
+          <td>${response[i].score}</td>
+          <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+        }
 
-          $("#user-list tbody").html(content);
-      });
+        $("#user-list tbody").html(content);
+        document.getElementById("score-load").style.display = "none";
+        document.getElementById("confirm").style.display = "block";
+        setTimeout(function() {
+          document.getElementById("confirm").style.display = "none";
+        }, 3000);
+        document.getElementById("start-button").style.display = "block";
+    });
   }
 })
