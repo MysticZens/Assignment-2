@@ -12,7 +12,7 @@ function startGame() {
   document.getElementById("start-button").style.display = "none";
   document.getElementById("end-game").style.display = "none";
   score = 0;
-  time = 1;
+  time = 5;
   document.getElementById("score").innerHTML = score;
   document.getElementById("time").innerHTML = time;
   intervalId = setInterval(countdown, 1000);
@@ -166,8 +166,8 @@ $(document).ready(function () {
             document.getElementById("confirm").style.display = "block";
             setTimeout(function() {
               document.getElementById("confirm").style.display = "none";
-            }, 3000);
-            document.getElementById("start-button").style.display = "block";
+              document.getElementById("start-button").style.display = "block";
+            }, 2000);
         });
       }
   })

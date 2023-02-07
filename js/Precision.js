@@ -170,8 +170,8 @@ $(document).ready(function () {
             document.getElementById("confirm").style.display = "block";
             setTimeout(function() {
               document.getElementById("confirm").style.display = "none";
-            }, 3000);
-            document.getElementById("start-button").style.display = "block"
+              document.getElementById("start-button").style.display = "block";
+            }, 2000);
         });
       }
   });

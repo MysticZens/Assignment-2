@@ -3,9 +3,12 @@ const startBtn = document.getElementById("startBtn");
 const result = document.getElementById("result");
 const time = document.getElementById("time");
 const message = document.getElementById("message");
+
 document.getElementById("result").style.display = "none";
 document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
+document.getElementById("score-load").style.display = "none";
+document.getElementById("confirm").style.display = "none";
 
 let startTime;
 let intervalId;
@@ -104,6 +107,8 @@ $(document).ready(function () {
       }
 
       else {
+        document.getElementById("submission-menu").style.display = "none";
+        document.getElementById("score-load").style.display = "block";
         let settings = {
             "async": true,
             "crossDomain": true,
@@ -125,6 +130,12 @@ $(document).ready(function () {
             console.log(response);
             $("#submit-score").prop("disabled", false);
             getUsers();
+            document.getElementById("score-load").style.display = "none";
+            document.getElementById("confirm").style.display = "block";
+            setTimeout(function() {
+              document.getElementById("confirm").style.display = "none";
+              document.getElementById("start-button").style.display = "block";
+            }, 2000);
         });
       }
   });
