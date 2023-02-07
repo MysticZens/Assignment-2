@@ -85,9 +85,9 @@ $(document).ready(function () {
       alert("You must input a name!");
       }
 
-      else if (userName.length > 8)
+      else if (userName.length > 14)
       {
-        alert("Your name must be at least 8 characters or more.");
+        alert("Your name must be at least 14 characters or more.");
       }
 
       else if (existingName) {
