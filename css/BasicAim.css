@@ -139,6 +139,7 @@
 /* End game display */
 #end-game {
     position: absolute;
+    text-align: center;
     left: 25%;
     bottom: 25%;
     background-color: white;
@@ -221,6 +222,25 @@
 }
 #close:hover{
     color: red;
+}
+#score-load{
+    position: absolute;
+    margin: 178px 35% 0 35%;
+}
+.successful-submission{
+    position: absolute;
+    text-align: center;
+    left: 25%;
+    bottom: 35%;
+    color: #333;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
 }
 /* End game display end */
 /* Dropdown stuff */
