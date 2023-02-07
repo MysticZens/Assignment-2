@@ -23,6 +23,8 @@ allStar.forEach((item, idx)=> {
 })
 
 document.getElementById("review-form").style.display = "none";
+document.getElementById("score-load").style.display = "none";
+document.getElementById("confirm").style.display = "none";
 
 function ReviewDisplay(){
     document.getElementById("review-form").style.display = "block";
@@ -59,7 +61,8 @@ $(document).ready(function () {
 		  alert("Your name must be at least 14 characters or more.");
 		}
   
-		else {      
+		else {
+			document.getElementById("score-load").style.display = "block";      
 			let jsondata = {
 				"name": userName,
 				"rank": userRank,
@@ -86,6 +89,13 @@ $(document).ready(function () {
 			$.ajax(settings).done(function (response) {
 				$("#submit-review").prop("disabled", false);
 				getUsers();
+				document.getElementById("review-form").style.display = "none";
+				document.getElementById("score-load").style.display = "none";
+				document.getElementById("confirm").style.display = "block";
+				setTimeout(function() {
+				  document.getElementById("confirm").style.display = "none";
+				  document.getElementById("start-button").style.display = "block";
+				}, 2000);
 			});
 		}
 	});

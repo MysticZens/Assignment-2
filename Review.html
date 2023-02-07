@@ -48,6 +48,10 @@
     </div>
   </div>
   <div id = "review-keep" class="review-store">
+    <div id = "confirm" class="successful-submission animation">
+      <p>Successfully Submitted into review page!</p>
+      <i class="fa-regular fa-thumbs-up"></i>
+    </div>
     <div id = "review-form" class="wrapper animation">
       <h3>Rate our website!</h3>
       <form action="#">
@@ -67,6 +71,7 @@
           <i class="fa-regular fa-star" style="--i: 4;"></i>
         </div>
         <textarea id="comment" name="opinion" cols="30" rows="5" placeholder="Your opinion..." required></textarea>
+        <lottie-player class = "animation" id = "score-load" src="https://assets4.lottiefiles.com/packages/lf20_usmfx6bp.json"  background="transparent"  speed="1.5"  style="width: 100px; height: 100px;"  loop autoplay></lottie-player>
         <div class="btn-group">
           <button type="submit" id="submit-review" class="btn submit">Submit</button>
           <button onclick="CancelSubmit()" class="btn cancel">Cancel</button>
@@ -103,5 +108,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/w3-include-header.js"></script>
   <script src="js/Review.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
