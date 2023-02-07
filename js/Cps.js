@@ -97,6 +97,8 @@ $(document).ready(function () {
       }
 
       else {
+        document.getElementById("submission-menu").style.display = "none";
+        document.getElementById("score-load").style.display = "block";
         let settings = {
             "async": true,
             "crossDomain": true,
@@ -118,13 +120,17 @@ $(document).ready(function () {
             console.log(response);
             $("#submit-score").prop("disabled", false);
             getUsers();
+            document.getElementById("score-load").style.display = "none";
+            document.getElementById("confirm").style.display = "block";
+            setTimeout(function() {
+              document.getElementById("confirm").style.display = "none";
+            }, 3000);
+            document.getElementById("start-button").style.display = "block";
         });
       }
   });
 
   function getUsers(limit = 10, all = true) {
-    document.getElementById("submission-menu").style.display = "none";
-    document.getElementById("score-load").style.display = "block";
     let settings = {
         "async": true,
         "crossDomain": true,
@@ -148,12 +154,6 @@ $(document).ready(function () {
         }
 
         $("#user-list tbody").html(content);
-        document.getElementById("score-load").style.display = "none";
-        document.getElementById("confirm").style.display = "block";
-        setTimeout(function() {
-          document.getElementById("confirm").style.display = "none";
-        }, 3000);
-        document.getElementById("start-button").style.display = "block";
     });
   }
 })

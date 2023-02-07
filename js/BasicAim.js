@@ -162,6 +162,12 @@ $(document).ready(function () {
         $.ajax(settings).done(function (response) {
             $("#submit-score").prop("disabled", false);
             getUsers();
+            document.getElementById("score-load").style.display = "none";
+            document.getElementById("confirm").style.display = "block";
+            setTimeout(function() {
+              document.getElementById("confirm").style.display = "none";
+            }, 3000);
+            document.getElementById("start-button").style.display = "block";
         });
       }
   })
@@ -191,12 +197,6 @@ $(document).ready(function () {
       }
 
       $("#user-list tbody").html(content);
-      document.getElementById("score-load").style.display = "none";
-      document.getElementById("confirm").style.display = "block";
-      setTimeout(function() {
-        document.getElementById("confirm").style.display = "none";
-      }, 3000);
-      document.getElementById("start-button").style.display = "block";
     })
   }
 
