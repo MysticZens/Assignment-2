@@ -6,7 +6,7 @@ var objectArray = Array();
 document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
 document.getElementById("score-load").style.display = "none";
-document.getElementsByClassName("successful-submission").style.display = "none";
+document.getElementById("confirm").style.display = "none";
 
 function startGame() {
   document.getElementById("start-button").style.display = "none";
@@ -192,9 +192,9 @@ $(document).ready(function () {
 
       $("#user-list tbody").html(content);
       document.getElementById("score-load").style.display = "none";
-      document.getElementsByClassName("successful-submission").style.display = "block";
+      document.getElementById("confirm").style.display = "block";
       setTimeout(function() {
-        document.getElementsByClassName("successful-submission").style.display = "none";
+        document.getElementById("confirm").style.display = "none";
       }, 3000);
       document.getElementById("start-button").style.display = "block";
     })
