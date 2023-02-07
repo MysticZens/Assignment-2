@@ -197,6 +197,9 @@
     width: 80%;
     margin: 0 10% 0 10%;
 }
+.about-game > p{
+    font-size: 2vw;
+}
 #score-load{
     position: absolute;
     margin: 178px 35% 15% 35%;
