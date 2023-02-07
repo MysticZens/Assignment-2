@@ -39,6 +39,7 @@ function toggleMenu(){
     subMenu.classList.toggle("open-menu");
 }
 
+
 $(document).ready(function () {
 	const APIKEY = "63e0ccba3bc6b255ed0c46f2";
 	getUsers();

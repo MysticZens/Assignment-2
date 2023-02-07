@@ -57,15 +57,16 @@
           <label>Name</label>
         </div>
         <br>
+        <p>Do select a rating or your form will not submit!</p>
         <div class="rating">
-          <input type="number" name="rating" id="rank" hidden>
+          <input type="number" name="rating" id="rank" hidden required>
           <i class="fa-regular fa-star" style="--i: 0;"></i>
           <i class="fa-regular fa-star" style="--i: 1;"></i>
           <i class="fa-regular fa-star" style="--i: 2;"></i>
           <i class="fa-regular fa-star" style="--i: 3;"></i>
           <i class="fa-regular fa-star" style="--i: 4;"></i>
         </div>
-        <textarea id="comment" name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+        <textarea id="comment" name="opinion" cols="30" rows="5" placeholder="Your opinion..." required></textarea>
         <div class="btn-group">
           <button type="submit" id="submit-review" class="btn submit">Submit</button>
           <button onclick="CancelSubmit()" class="btn cancel">Cancel</button>
