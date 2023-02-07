@@ -100,7 +100,7 @@ $(document).ready(function () {
 		}
 	});
   
-	function getUsers(limit = 10, all = true) {
+	function getUsers(all = true) {
 		let settings = {
 			"async": true,
 			"crossDomain": true,
@@ -116,7 +116,7 @@ $(document).ready(function () {
 		$.ajax(settings).done(function (response) {
 			let content = "";
 
-			for (var i = 0; i < response.length && i < limit; i++)
+			for (var i = 0; i < response.length; i++)
 			{
 				let stars = `<i class="fa-solid fa-star" style=":${i}"></i>`
 				let repeat = response[i].rank;
