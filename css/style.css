@@ -24,80 +24,16 @@
     color: white;
     text-align: center;     
 }
-.game-header > h1{
-    font-size: 3vw;
-}
-.game-text{
-    margin: 2% 2% 0 2%;
-    display:flex;
-    flex-direction: row;
-    color:white;
-}
-.first-text{
-    text-align: center;
-    font-size: 2vw;
-    margin-top: 10%;
-    width: 15%;
-}
-.second-text{
-    width: 74%;
-}
-.second-text img{
-    width: 100%;
-}
-.third-text{
-    font-size: 2vw;
-    text-align: center;
-    margin-top:10%;
-    width:15%;
-}
 .a{
     border:solid 3px green;
 }
 .main-header{
     color:white;
 }
-.about-us-header{
-    font-size: 3svw;
-}
-.about-us{
-    margin: 0 5% 0 5%;
-    text-align: center;
-    color: white;
-    font-size: 150%;
-}
-.about-us > p{
-    font-size: 2vw;
-}
-.game-choice{
-    display: flex;
-    flex-direction: column;
-}
-.game-choice > div > a > h2{
-    font-size: 3vw;
-}
-.row-one{
-    display: flex;
-    flex-direction: row;
-}
-
-.row-one img{
-    width: 83%;
-    height: 83%;
-}
-.game{
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    width: 45%;
-    margin: 2% 5% 2% 5%;
-    transform: translateY(0);
-    transition: 0.2s;
-}
 .game:hover{
     text-decoration: none;
     color: #FFCCCB;
-    background-color: rgba(14, 14, 71, 0.6);
+    background-color: rgba(22, 22, 76, 0.6);
     cursor: pointer;
     transform: translateY(-10px);
 }
@@ -116,10 +52,77 @@
     color: white;
 }
 .reasoning-text > h2{
-    font-size: 3vw;
+    font-size: 150%;
 }
 .reasoning-text > p{
-    font-size: 2vw;
+    font-size: 100%;
+}
+.about-us-header{
+    font-size: 150%;
+}
+.about-us{
+    margin: 0 5% 0 5%;
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+.about-us > p{
+    font-size: 100%;
+}
+.game-header > h1{
+    font-size: 200%;
+}
+.game-choice{
+    display: flex;
+    flex-direction: column;
+}
+.row-one{
+    display: flex;
+    flex-direction: row;
+}
+
+.row-one img{
+    width: 83%;
+    height: 83%;
+}
+.game{
+    border: 1px solid black;
+    background-color: rgba(14, 14, 71, 0.6);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 47%;
+    margin: 2% 2% 2% 2%;
+    transform: translateY(0);
+    transition: 0.2s;
+}
+.game-choice > div > a > h2{
+    font-size: 150%;
+}
+.game-text{
+    margin: 2% 2% 0 2%;
+    display:flex;
+    flex-direction: row;
+    color:white;
+    margin-bottom: 5%;
+}
+.first-text{
+    text-align: center;
+    font-size: 180%;
+    margin-top: 10%;
+    width: 15%;
+}
+.second-text{
+    width: 74%;
+}
+.second-text img{
+    width: 100%;
+}
+.third-text{
+    font-size: 180%;
+    text-align: center;
+    margin-top:10%;
+    width:15%;
 }
 /* Zoom animation */
 .animate {
@@ -152,3 +155,71 @@
     z-index: -1;
     border: none;
 }
+
+/* MEDIA QUERY */
+@media screen and (max-width: 520px) { 
+    .about-us-header{
+        font-size: 100%;
+    }
+    .reasoning-text > h2{
+        font-size: 90%;
+    }
+    .about-us > p{
+        font-size: 70%;
+    }
+    .reasoning-text > p{
+        font-size: 70%;
+    }
+    .row-one{
+        flex-direction: column;
+    }
+    .game{
+        width: 95%;
+        margin: 5% 2.5% 5% 2.5%;
+    }
+    .game-text{
+        flex-direction: column;
+    }
+    .first-text{
+        margin: 0 5% 0 5%;
+        width: 90%;
+    }
+    .first-text > p{
+        font-size: 170%;
+    }
+    .second-text{
+        width: 100%;
+    }
+    .third-text{
+        margin: 2% 5% 0 5%;
+        width: 90%;
+    }
+    .third-text > p{
+        font-size: 170%;
+    }
+}
+@media screen and (max-width: 1138px){
+    .first-text{
+        font-size: 150%;
+    }
+    .third-text{
+        font-size: 150%;
+    }
+}
+@media screen and (max-width: 900px){
+    .first-text{
+        font-size: 120%;
+    }
+    .third-text{
+        font-size: 120%;
+    }
+}
+@media screen and (max-width: 722px){
+    .first-text{
+        font-size: 90%;
+    }
+    .third-text{
+        font-size: 90%;
+    }
+}
+    
