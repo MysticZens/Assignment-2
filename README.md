@@ -26,14 +26,13 @@ Here are some of the features that I have used for my website:
 - Feature 1 - A game where 20 seconds is given to click as many targets as possible and it will appear randomly on the game area
 - Feature 2 - A dropdown to display the choices between target colors
 - Feature 3 - When a target colour is clicked, the target color will successfully change the colour of the target
-
+- Feature 4 - A game where 20 seconds is given to click as many targets as possible but a smaller target for precision of aim
+- Feature 5 - Review pages for reviews by users which uses API
+- Feature 6 - Leaderboards for all the games which uses API to show
+- Feature 7 - A game where the user has to click as soon as the target appears to test the reaction time of the user
+- Feature 8 - A game where the user has to click the Game area as many times as possible to test click speed 
 ### Features Left to Implement
-- Feature 1 - A game where 20 seconds is given to click as many targets as possible but a smaller target for precision of aim
-- Feature 2 - A game where the user has to click as soon as the target appears to test the reaction time of the user
-- Feature 3 - A game where the user has to click the target as many times as possible to test click speed 
-- Feature 4 - Fade in and out between pages (transition between pages)
-- Feature 5 - Leaderboards for all the games which uses API to show
-- Feature 6 - Review pages for reviews by users which uses API
+- Feature 1 - Fade in and out between pages (transition between pages)
 ## Technologies Used
 - Html is used to create my words and the layout of my pages
 - Css is used to style and apply fonts to text and create my growing text
@@ -62,6 +61,8 @@ Here are some of the features that I have used for my website:
     - User inputs their name
     - User give a brief explanation to why they rated it the number of stars they rated it
     - input appears in the review board
+6. API related
+    - Api is all good but no premium causes us to always wait long period of times before they allow us to use the database again.
 ## Credits
 ### Content
 - Inspiration for our website is from : https://aimtrainer.io
@@ -69,6 +70,7 @@ Here are some of the features that I have used for my website:
 ### Media
 Note : *The gif currently in index.html is not going to be used in the end product of the website*
 - Shooting Star background : https://www.google.com/url?sa=i&url=https%3A%2F%2Fusagif.com%2Fstarfall-gifs%2F&psig=AOvVaw1TSfDM6y94pYTYUQBJL5zE&ust=1674556712865000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPD-kYLA3fwCFQAAAAAdAAAAABAE
+- New background : https://github.com/WebDevSHORTS/Parallax-Star-Background
 - Facebook icon : https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/2048px-Facebook_logo_36x36.svg.png
 - Instagram icon : https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png
 - Adobe Illustrator
