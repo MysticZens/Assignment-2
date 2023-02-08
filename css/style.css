@@ -81,18 +81,15 @@
     flex-direction: row;
 }
 
-.row-one img{
-    width: 83%;
-    height: 83%;
-}
+
 .game{
     border: 1px solid black;
     background-color: rgba(14, 14, 71, 0.6);
     color: white;
     text-decoration: none;
     text-align: center;
-    width: 47%;
-    margin: 2% 2% 2% 2%;
+    width: 45%;
+    margin: 2% 5% 2% 5%;
     transform: translateY(0);
     transition: 0.2s;
 }
