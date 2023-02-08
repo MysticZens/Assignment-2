@@ -59,9 +59,6 @@
     color: #FFCCCB;
     text-decoration: none;
 }
-.game{
-    margin: 0 2% 0 2%;
-}
 .leaderboard-area{
     color: white;
     width: 90%;
@@ -177,7 +174,7 @@
 #play-again-button, #submit-button {
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: 1.2em;
+    font-size: 120%;
     font-weight: bold;
     margin-top: 20px;
     cursor: pointer;

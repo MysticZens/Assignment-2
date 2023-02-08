@@ -36,9 +36,6 @@
     color: #FFCCCB;
     text-decoration: none;
 }
-.game{
-    margin: 0 2% 0 2%;
-}
 .leaderboard-area{
     color: white;
     width: 90%;
@@ -52,7 +49,7 @@
     margin: 0 10% 0 10%;
 }
 .about-game > p{
-    font-size: 2vw;
+    font-size: 150%;
 }
 
 /* Game stuff */
@@ -72,12 +69,12 @@
   
 #start-button {
     position: absolute;
-    top: 45%;
-    left: 45%;
     color: black;
+    margin: 210px 0 0 43.5%;
     background-color: white;
+    width: 13%;
     padding: 2% 1% 2% 1%;
-    font-size: 2vh;
+    font-size: 100%;
     font-weight: bold;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 0px #ccc;
@@ -88,8 +85,6 @@
     background-color: red;
     box-shadow: 0px 0px 10px 0px red;
 }
-
-
 .score-time-display{
     font-size: 130%;
     border-radius: 10px;
@@ -104,20 +99,42 @@
 .score-time-color{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .color-change{
+    margin-top: 3%;
     color: white;
     width: 10%;
-    height: 50%;
     text-align: center;
-    border-radius: 5px;
-    margin-left: 35%;
+}
+.color-change > p{
+    color: white;
+    text-shadow: 0px 0px 10px wheat;
+}
+#time-checker{
+    width: 22%;
+    margin: 0 39% 0 39%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
+}
+#scoreboard{
+    position: absolute;
+    margin: 2% 0 0 15%;
+    font-size: 20px;
+    color: dodgerblue;
+    text-shadow: 0px 0px 10px gray;
 }
 /* End game stuff */
 /* End game display */
 #end-game {
     position: absolute;
+    text-align: center;
     left: 25%;
     bottom: 25%;
     background-color: white;
@@ -143,7 +160,7 @@
 #play-again-button, #submit-button {
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: 1.2em;
+    font-size: 120%;
     font-weight: bold;
     margin-top: 20px;
     cursor: pointer;
@@ -162,7 +179,7 @@
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: 1.2em;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 20px;
     cursor: pointer;
@@ -220,14 +237,19 @@
     width: 50%;
     margin: 0 auto;
 }
+#final-scores {
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 /* End game display end */
 /* Dropdown stuff */
 .sub-menu-wrap{
-    z-index: 4;
     position: absolute;
-    margin-top: -5%;
-    right: 9%;
+    z-index: 2;
     width: 120px;
+    margin: -20px 0 0 43%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
@@ -372,4 +394,115 @@ tbody {
 
 tbody {
     color: white;
+}
+
+
+/* MEDIA QUERY */
+/* MEDIA QUERY */
+@media screen and (max-width: 1181px) {
+    .back-button{
+        width: 25%;
+        margin: 0 37.5% 0 37.5%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .back-button{
+        width: 30%;
+        margin: 0 35% 0 35%;
+    }
+}
+@media screen and (max-width: 827px) {
+    .back-button{
+        width: 35%;
+        margin: 0 32.5% 0 32.5%;
+    }
+}
+@media screen and (max-width: 709px) {
+    .back-button{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 636px) {
+    #time-checker{
+        width: 40%;
+        margin: 0 0 0 50%;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:305px) {
+    #time-checker{
+        width: 40%;
+        margin: 0 0 0 50%;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .game{
+        width: 100%;
+    }
+    #game-area{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1174px) {
+    .color-change{
+        width: 15%;
+    }
+}
+@media screen and (max-width: 786px) {
+    .color-change{
+        width: 20%;
+    }
+}
+@media screen and (max-width: 592px) {
+    .color-change{
+        width: 100%;
+    }
+    .about-game > p{
+        font-size: 100%;
+    }
+}
+@media screen and (max-width: 414px) {
+    #start-button {
+        margin: 210px 0 0 35%;
+        width: 30%;
+    }
+}
+@media screen and (max-width: 782px) {
+    #final-score {
+        font-size: 15px;
+    }
+    #close {
+        font-size: 15px;
+    }
+    #submission-menu > p{
+        font-size: 15px;    
+    }
+    #submit-score{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 289px) {
+    #final-score {
+        font-size: 10px;
+    }
+    #close {
+        font-size: 10px;
+    }
+    #submission-menu > p{
+        font-size: 10px;    
+    }
+}
+@media screen and (max-width: 370px) {
+    #final-scores{
+        font-size: 20px;
+    }
+    #play-again-button{
+        font-size: 15px;
+    }
+    #submit-button{
+        font-size: 15px;
+    }
 }
