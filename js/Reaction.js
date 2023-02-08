@@ -34,7 +34,7 @@ gameArea.addEventListener("click", function() {
     gameArea.style.backgroundColor = "red";
     clearTimeout(intervalId);
     message.classList.add("hidden");
-    if (clickCount < 1) {
+    if (clickCount < 5) {
       intervalId = setTimeout(startGame, Math.random() * 5000 + 1000);
     } else {
       gameStarted = false;

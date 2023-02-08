@@ -9,7 +9,7 @@ document.getElementById("score-load").style.display = "none";
 document.getElementById("confirm").style.display = "none";
 
 let clicks = 0;
-let timeLeft = 1;
+let timeLeft = 10;
 let intervalId;
 let gameStarted = false;
 

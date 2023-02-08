@@ -16,17 +16,23 @@
     <iframe class = "background" src="Stars.html"></iframe>
     <div w3-include-header="header.html"></div> 
     <br>
-    <div class="a back-button">
+    <div class="back-button">
       <a href = "index.html"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Basic Aiming</a>
     </div>
     <br>
     <br>
-    <div class="a game">
-
+    <div class="game">
+      <div id="scoreboard">
+        Score: <span id="score">0</span>
+      </div>
+      <div id="time-checker">
+          Time Remaining: <span id="time">20</span>
+      </div>
+      <br>
       <div id = "game-area">
         <div class = "animate" id="start-button" onclick="startGame()">Start Game</div>
         <div id="end-game" class = "animate">
-          <div id="final-score">Final Score: <span id="final-score-value"></span></div>
+          <div id="final-scores">Final Score: <span id="final-score-value"></span></div>
           <div id="play-again-button" onclick="playagain()">Play Again</div>
           <div id="submit-button" onclick="displaySubmit()">Submit Your Score!</div>
         </div>
@@ -47,17 +53,8 @@
         <lottie-player class = "animate" id = "score-load" src="https://assets4.lottiefiles.com/packages/lf20_usmfx6bp.json"  background="transparent"  speed="1.5"  style="width: 30%; height: 30%;"  loop autoplay></lottie-player>
       </div>
 
-      <div class="a score-time-color">
-        <div class="a score-time-display">
-          <div id="scoreboard">
-            &nbsp;&nbsp;&nbsp;Score: <span id="score">0</span>
-            </div>
-          <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
-          <div id="time-checker">
-              Time Remaining: <span id="time">20</span>
-          </div>
-        </div>
-        <div class="a color-change">
+      <div class="score-time-color">
+        <div class="color-change">
           <p onclick="toggleMenu()"><i class="fa-solid fa-palette"></i>&nbsp;Target Color</p>
         </div>
       </div>
@@ -93,7 +90,7 @@
       </div>
     </div>
     <br><br>
-    <div class="a leaderboard-area">
+    <div class="leaderboard-area">
       <h2>Global leaderboard</h2>
       <div class="leaderboard"> 
       <table class="table" id="user-list">
@@ -109,7 +106,7 @@
     </div>
     
     <br><br>
-    <div class="a about-game">
+    <div class="about-game">
       <h2>Basic Aiming</h2>
       <p>Basic Aiming, It is simple and the targets are average. Simply aim your cursor at the target when
       it spawns and click it. For every target you click, your score will go up. You are given 20 seconds
