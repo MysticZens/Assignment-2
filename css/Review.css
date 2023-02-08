@@ -250,7 +250,7 @@ html{
 /* Increases the max-height which will allow the dropdown menu to show itself */
 .sub-menu-wrap.open-menu{
   z-index: 4;
-  max-height: 250px;
+  max-height: 300px;
 }
 /* Giving the dropdown menu a backgroud color, padding and margin */
 .sub-menu{
