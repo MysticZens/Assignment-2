@@ -518,3 +518,14 @@ tbody {
         font-size: 15px;
     }
 }
+@media screen and (max-width: 328px) {
+    #final-scores{
+        font-size: 10px;
+    }
+    #play-again-button{
+        font-size: 5px;
+    }
+    #submit-button{
+        font-size: 5px;
+    }
+}

@@ -16,18 +16,18 @@
   <iframe class = "background" src="Stars.html"></iframe>
   <div w3-include-header="header.html"></div> 
   <br>
-  <div class="a back-button">
+  <div class="back-button">
     <a href = "index.html"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Reaction Time</a>
   </div>
   <br><br>
-  <div class="a game">
+  <div class="game">
     <div id="gameArea">
       <div id = "confirm" class="successful-submission animate">
         <p>Successfully Submitted into leaderboards!</p>
         <i class="fa-regular fa-thumbs-up"></i>
       </div>
       <div id="end-game" class = "animate">
-        <div id="final-score">Final Score: <span id="final-score-value"></span> ms</div>
+        <div id="final-scores">Final Score: <span id="final-score-value"></span> ms</div>
         <div id="play-again-button" onclick="reshow()">Play Again</div>
         <div id="submit-button" onclick="displaySubmit()">Submit Your Score!</div>
       </div>
@@ -47,11 +47,11 @@
     </div>
     <br>
     <div id="startBtn" class = "animate" onclick = "start()">Start</div>
-    
-    <p id="message" class="hidden"></p>
   </div>
-  <br><br><br>
-  <div class="a leaderboard-area">
+  <br><br>
+  <p id="message" class="hidden"></p>
+  <br>
+  <div class="leaderboard-area">
     <h2>Global leaderboard</h2>
     <div class="leaderboard"> 
       <table class="table" id="user-list">
@@ -66,7 +66,7 @@
     </div>
   </div>
   <br><br>
-  <div class="a about-game">
+  <div class="about-game">
     <h2>Reaction Time</h2>
     <p>Reaction Time, You are given 5 tries to test your reaction time and your average time will be calculated
     within those 5 intervals. The lower your average score is the faster you're reaction time is. This will help
