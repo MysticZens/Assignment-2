@@ -36,19 +36,13 @@
     user-select: none;
     overflow: hidden;
 }
-/* 
-#game-area:active {
-    background-color: black;
-    transform: scale(0.95);
-    box-shadow: 0px 0px 20px gray;
-} */
 .ripple{
     position: absolute;
     width: 0px;
     height: 0px;
     border-radius: 50%;
     pointer-events: none;
-    background-color: rgb(0 128 0 / 1);
+    background-color: rgb(6 37 75 / 1);
     transform: translate(-50%,-50%);
     animation: explode 1.5s ease forwards;
 }
@@ -57,7 +51,7 @@
     to{
         width: 600px;
         height: 600px;
-        background-color: rgb(0 128 0 / 0);
+        background-color: rgb(6 37 75 / 0);
     }
 }
 
@@ -69,7 +63,7 @@
     color: black;
     background-color: white;
     padding: 1% 1% 1% 1%;
-    font-size: 1vw;
+    font-size: 80%;
     font-weight: bold;
     border-radius: 30px;
     box-shadow: 0px 0px 10px 0px #ccc;
@@ -101,13 +95,20 @@
   
 .final-score {
     color: #333;
-    font-size: 1.5vw;
+    font-size: 100%;
     font-weight: bold;
     margin-bottom: 20px;
 }
   
 #final-score-value {
     color: #333;
+}
+
+.final-scores {
+    color: #333;
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
   
 #play-again-button, #submit-button {
@@ -154,7 +155,7 @@
     width: 50%;
     margin: 0 auto;
 }
-#subimssion-menu > input{
+#submission-menu > input{
     width: 80%;
 }
 #close {
@@ -222,7 +223,7 @@ html{
     margin: 0 10% 0 10%;
 }
 .about-game > p{
-    font-size: 2vw;
+    font-size: 150%;
 }
 #score-load{
     position: absolute;
@@ -288,4 +289,91 @@ thead {
 
 tbody {
     color: white;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1166px){
+    .back-button{
+        width: 30%;
+        margin:0 35% 0 35% ;
+    }
+}
+@media screen and (max-width: 855px){
+    .back-button{
+        width: 40%;
+        margin:0 30% 0 30% ;
+    }
+}
+@media screen and (max-width: 641px){
+    .back-button{
+        width: 50%;
+        margin:0 25% 0 25% ;
+    }
+    #countdown{
+        width: 70%;
+        margin: 0 15% 0 15%;
+    }
+    #start-button{
+        width: 30%;
+        left: 35%;
+    }
+    .about-game > p{
+        font-size: 100%;
+    }
+
+}
+@media screen and (max-width: 513px){
+    .back-button{
+        width: 100%;
+        margin:0;
+    }
+    #game-area{
+        width: 100%;
+        margin: 0;
+    }
+    #score{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 352px){
+    .final-scores{
+        font-size: 70%;
+    }
+    #play-again-button, #submit-button{
+        font-size: 70%;
+    }
+}
+@media screen and (max-width: 588px){
+    .final-score{
+        font-size: 70%;
+    }
+    #submission-menu > p{
+        font-size: 70%;
+    }
+    #submit-score{
+        font-size: 50%;
+    }
+    #close {
+        font-size: 12px;
+    }   
+}
+@media screen and (max-width: 254px){
+    .final-score{
+        font-size: 60%;
+    }
+    #submission-menu > p{
+        font-size: 60%;
+    }
+    #submit-score{
+        font-size: 40%;
+    }
+    #close {
+        font-size: 10px;
+    }   
+}
+@media screen and (max-width: 489px){
+    #score-load{
+        margin: 90px 35% 15% 35%;
+    }
 }
