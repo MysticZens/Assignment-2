@@ -353,6 +353,10 @@
     transition: 0.2s;
 }
 
+thead {
+    color: white;
+}
+
 tbody {
     color: white;
 }

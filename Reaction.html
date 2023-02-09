@@ -14,7 +14,7 @@
 </head>
 <body>
   <iframe class = "background" src="Stars.html"></iframe>
-  <div w3-include-header="header.html"></div> 
+  <div w3-include-header="header.html"></div>  
   <br>
   <div class="back-button">
     <a href = "index.html"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Reaction Time</a>
@@ -35,7 +35,7 @@
         <span id="close" onclick="cancelSubmit()">&times;</span>
         <div id="final-score">Your Final Score: <span id="final-score-values"></span> ms</div>
         <p style="color: black;">Enter the name you want to display!</p>
-        <input type="text" id="name" required unique>
+        <input type="text" id="name" required>
         <div id="submit-score-button">
         <input type="submit" id="submit-score">
         </div>
@@ -56,9 +56,11 @@
     <div class="leaderboard"> 
       <table class="table" id="user-list">
         <thead>
-          <th>Name</th>
-          <th>Time</th>
-          <th>Date of record</th>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Date of record</th>
+          </tr>
         </thead>
         
         <tbody></tbody>

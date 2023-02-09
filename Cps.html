@@ -28,15 +28,15 @@
             <div id = "counter"></div>
         </div>
         <div id="end-game" class = "animate">
-            <div id="final-score">Final Score: <span id="final-score-value"></span></div>
+            <div class="final-score">Final Score: <span id="final-score-value"></span></div>
             <div id="play-again-button">Play Again</div>
             <div id="submit-button" onclick="DisplaySubmit()">Submit Your Score!</div>
         </div>
         <div id="submission-menu" class = "animate">
             <span id="close" onclick="CancelSubmit()">&times;</span>
-            <div id="final-score">Your Final Score: <span id="final-score-values"></span></div>
+            <div class="final-score">Your Final Score: <span id="final-score-values"></span></div>
             <p style="color: black;">Enter the name you want to display!</p>
-            <input type="text" id="name" required unique>
+            <input type="text" id="name" required>
             <div id="submit-score-button">
             <input type="submit" id="submit-score">
             </div>
@@ -57,9 +57,11 @@
     <div class="leaderboard"> 
       <table class="table" id="user-list">
         <thead>
-          <th>Name</th>
-          <th>Score</th>
-          <th>Date of record</th>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Date of record</th>
+          </tr>
         </thead>
         
         <tbody></tbody>

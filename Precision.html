@@ -40,7 +40,7 @@
         <span id="close" onclick="CancelSubmit()">&times;</span>
         <div id="final-score">Your Final Score: <span id="final-score-values"></span></div>
         <p style="color: black;">Enter the name you want to display!</p>
-        <input type="text" id="name" required unique>
+        <input type="text" id="name" required>
         <div id="submit-score-button">
         <input type="submit" id="submit-score">
         </div>
@@ -95,9 +95,11 @@
     <div class="leaderboard"> 
     <table class="table" id="user-list">
       <thead>
-        <th>Name</th>
-        <th>Score</th>
-        <th>Date of record</th>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Date of record</th>
+        </tr>
       </thead>
       
       <tbody></tbody>

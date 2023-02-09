@@ -78,7 +78,7 @@
     margin: 0 auto;
 }
   
-#final-score {
+.final-score {
     color: #333;
     font-size: 1.5vw;
     font-weight: bold;
@@ -256,6 +256,10 @@
     height: 100%;
     z-index: -1;
     border: none;
+}
+
+thead {
+    color: white;
 }
 
 tbody {

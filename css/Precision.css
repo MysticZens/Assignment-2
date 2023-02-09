@@ -392,6 +392,10 @@ tbody {
     border: none;
 }
 
+thead {
+    color: white;
+}
+
 tbody {
     color: white;
 }
