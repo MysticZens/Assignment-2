@@ -22,6 +22,7 @@
     text-align: center;
 }
 #game-area {
+    position: relative;
     width: 80%;
     margin: 0 10% 0 10%;
     height: 300px;
@@ -32,12 +33,32 @@
     font-weight: bold;
     transition: all 0.1s;
     cursor: pointer;
+    user-select: none;
+    overflow: hidden;
 }
-
+/* 
 #game-area:active {
     background-color: black;
     transform: scale(0.95);
     box-shadow: 0px 0px 20px gray;
+} */
+.ripple{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: rgb(0 128 0 / 1);
+    transform: translate(-50%,-50%);
+    animation: explode 1.5s ease forwards;
+}
+
+@keyframes explode{
+    to{
+        width: 600px;
+        height: 600px;
+        background-color: rgb(0 128 0 / 0);
+    }
 }
 
 #start-button {
@@ -155,6 +176,9 @@
 #submission-menu:active{
     transform: scale(1);
     box-shadow: 0px 0px 20px gray;
+}
+html{
+    cursor: context-menu;
 }
 /* End game stuff */
 .a{

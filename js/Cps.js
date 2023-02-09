@@ -66,6 +66,19 @@ function CancelSubmit(){
     document.getElementById("submission-menu").style.display = "none";
 }
 
+// Ripple effect on click
+const btn = document.getElementById("game-area");
+
+btn.addEventListener("click", ev => {
+  let ripple = document.createElement('div');
+  ripple.classList = "ripple";
+  ripple.style.left = ev.offsetX + 'px';
+  ripple.style.top = ev.offsetY + 'px';
+  btn.append(ripple);
+  ripple.addEventListener('animationend', () => ripple.remove());
+});
+
+
 $(document).ready(function () {
   const APIKEY = "63e0ccba3bc6b255ed0c46f2";
   let existingName = false;

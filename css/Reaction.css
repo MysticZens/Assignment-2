@@ -200,6 +200,9 @@
 .about-game > p{
     font-size: 150%;
 }
+html{
+    cursor: context-menu;
+}
 /* Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;

@@ -51,7 +51,9 @@
 .about-game > p{
     font-size: 150%;
 }
-
+html{
+    cursor: context-menu;
+}
 /* Game stuff */
 
 

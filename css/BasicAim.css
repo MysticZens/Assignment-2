@@ -144,6 +144,9 @@
     color: dodgerblue;
     text-shadow: 0px 0px 10px gray;
 }
+html{
+    cursor: context-menu;
+}
 /* End game stuff */
 /* End game display */
 #end-game {

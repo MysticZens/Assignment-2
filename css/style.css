@@ -121,6 +121,9 @@
     margin-top:10%;
     width:15%;
 }
+html{
+    cursor: context-menu;
+}
 /* Zoom animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
