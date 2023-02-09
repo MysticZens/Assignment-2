@@ -333,3 +333,8 @@ tbody {
         font-size: 10px;
     }
 }
+@media screen and (max-width: 481px) {
+    #score-load{
+        margin: 40px 0 0 43%;
+    }
+}
