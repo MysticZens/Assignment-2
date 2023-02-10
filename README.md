@@ -11,15 +11,21 @@ When we decided to make this website, this website is for gamers, specifically t
 - As a regular player who does not play games, it is convenient for them to visit the website to play without having to download any content to their desktop. 
 ### Wireframe Links
 #### Desktop Version
-- https://xd.adobe.com/view/ac8c8b5d-743a-47d0-913a-77fb8bef9f4e-f9df/
-- https://xd.adobe.com/view/6bf68062-9edb-4f52-9406-04f365ca296c-3ea5/
+- https://xd.adobe.com/view/1c5873df-5be5-40ee-82c5-25701dc81ff8-490b/
+- https://xd.adobe.com/view/af9b3163-5315-4a45-9a53-b29a9ecf0b9c-fac8/
+- https://xd.adobe.com/view/b2c33fbb-783f-4062-b272-ce937d091f0b-e790/
 - https://xd.adobe.com/view/f603da65-3ca6-4c2d-9937-5c68c87dcd3d-a350/
-- https://xd.adobe.com/view/f603da65-3ca6-4c2d-9937-5c68c87dcd3d-a350/
+- https://xd.adobe.com/view/286c4f84-67a6-4a66-9969-40f44aa54a5a-7d3f/
+- https://xd.adobe.com/view/05af8e13-d926-47e9-b000-a1e6a29a20d9-50fc/
+- https://xd.adobe.com/view/38c51f3a-9fb5-4eaa-b6c6-058b97825c68-6d96/
 #### Mobile version
-- https://xd.adobe.com/view/063bab8d-932d-4c4c-8164-0ecb9a94af34-5368/
-- https://xd.adobe.com/view/c08a7b25-f687-4e6e-9c5a-dd80b461ec1b-95d9/
-- https://xd.adobe.com/view/f18cf68c-1c4a-4242-b199-b95c0d449c8e-a4df/
+- https://xd.adobe.com/view/56878644-7639-46f0-adbc-ef4153d75fc2-03d4/
+- https://xd.adobe.com/view/a704f1e2-93ff-452d-8fbd-84b9f9e16206-f257/
+- https://xd.adobe.com/view/cf4f6323-9670-46f8-9f8f-13dbfb86141b-9a1c/
 - https://xd.adobe.com/view/a3ef714a-5f66-4afc-a00d-cd536cd32879-f6bc/
+- https://xd.adobe.com/view/14909d76-4e94-46f7-82ea-7bca0f901741-41c3/
+- https://xd.adobe.com/view/6213de8f-66f3-4c7e-9992-206064c5509b-3740/
+- https://xd.adobe.com/view/f0ac8947-bae9-438b-ba33-1f952085ce98-a5ff/
 ## Features
 Here are some of the features that I have used for my website:
 ### Existing Features
