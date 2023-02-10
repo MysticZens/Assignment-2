@@ -24,7 +24,7 @@ html{
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     margin:2%;
-    /* text-shadow: 5px -5px yellow; */
+    text-shadow: -5px 0 black;
     font-size: 100%;
     color: white;
 }
@@ -59,28 +59,30 @@ html{
     margin: 0 5% 0 5%;
     text-align: center;
     color: white;
-    font-size: 150%;
 }
 .footer {
     text-align: center;
     color: white;
 }
 .reasoning-text > h2{
+    font-family: 'Press Start 2P', cursive;
     font-size: 150%;
 }
 .reasoning-text > p{
+    font-family: 'Press Start 2P', cursive;
     font-size: 100%;
 }
 .about-us-header{
+    font-family: 'Press Start 2P', cursive;
     font-size: 150%;
 }
 .about-us{
     margin: 0 5% 0 5%;
     text-align: center;
     color: white;
-    font-size: 150%;
 }
 .about-us > p{
+    font-family: 'Press Start 2P', cursive;
     font-size: 100%;
 }
 .game-header > h1{
@@ -123,9 +125,11 @@ html{
     margin-bottom: 5%;
 }
 .first-text{
+    z-index: 2;
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
-    font-size: 180%;
-    margin-top: 10%;
+    font-size: 90%;
+    margin-top: 15%;
     width: 15%;
 }
 .second-text{
@@ -135,9 +139,11 @@ html{
     width: 100%;
 }
 .third-text{
-    font-size: 180%;
+    z-index: 2;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 90%;
     text-align: center;
-    margin-top:10%;
+    margin-top:15%;
     width:15%;
 }
 /* Zoom animation */
@@ -201,10 +207,10 @@ html{
 /* MEDIA QUERY */
 @media screen and (max-width: 520px) { 
     .about-us-header{
-        font-size: 100%;
+        font-size: 110%;
     }
     .reasoning-text > h2{
-        font-size: 90%;
+        font-size: 100%;
     }
     .about-us > p{
         font-size: 70%;
@@ -242,32 +248,32 @@ html{
 }
 @media screen and (max-width: 1138px){
     .first-text{
-        font-size: 150%;
+        font-size: 70%;
     }
     .third-text{
-        font-size: 150%;
+        font-size: 70%;
     }
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 918px){
     .first-text{
-        font-size: 120%;
+        font-size: 60%;
     }
     .third-text{
-        font-size: 120%;
+        font-size: 60%;
     }
 }
 @media screen and (max-width: 722px){
     .first-text{
-        font-size: 90%;
+        font-size: 50%;
     }
     .third-text{
-        font-size: 90%;
+        font-size: 50%;
     }
     .main-header{
-        font-size: 70%;
+        font-size: 100%;
     }
     .main-header > h1{
-        font-size: 100%;
+        font-size: 130%;
     }
 }
     
