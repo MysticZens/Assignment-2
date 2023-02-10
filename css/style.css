@@ -153,6 +153,7 @@
 }
 .second-text img{
     width: 100%;
+    border: 1px solid black;
 }
 .third-text{
     font-size: 180%;
