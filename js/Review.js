@@ -2,17 +2,20 @@ const allStar = document.querySelectorAll('.rating .fa-star');
 const ratingValue = document.querySelector('.rating input');
 const APIKEY = "63e0ccba3bc6b255ed0c46f2";
 
+// Gets all the star items
 allStar.forEach((item, idx)=> {
 	item.addEventListener('click', function () {
 		let click = 0;
 		ratingValue.value = idx + 1;
 
 		allStar.forEach(i=> {
+			// replaces all the solid stars with empty one when click
 			i.classList.replace('fa-solid', 'fa-regular');
 			i.classList.remove('active');
-		})
+		});
 		for(let i=0; i<allStar.length; i++) {
 			if(i <= idx) {
+				// Replaces all the empty stars with solid ones when clicked
 				allStar[i].classList.replace('fa-regular', 'fa-solid');
 				allStar[i].classList.add('active');
 			} else {
@@ -28,10 +31,12 @@ document.getElementById("score-load").style.display = "none";
 document.getElementById("confirm").style.display = "none";
 
 function ReviewDisplay(){
+	// Display review form
     document.getElementById("review-form").style.display = "block";
 }
 
 function CancelSubmit() {
+	// remove review form
     document.getElementById("review-form").style.display = "none";
 }
 
@@ -150,7 +155,7 @@ function getUsersFilter(value) {
 
 	$.ajax(settings).done(function (response) {
 		let content = "";
-
+		// Make it so that they will only take the number of stars in "value"
 		for (var i = 0; i < response.length; i++)
 		{
 			if (response[i].rank == value) {

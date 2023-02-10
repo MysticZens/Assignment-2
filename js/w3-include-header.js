@@ -15,7 +15,7 @@ function includeHeader() {
                     tag[index].parentNode.replaceChild(a, tag[index]);
                     includeHeader();
                 }
-            }
+            };
             xhttp.open("GET", file, true);
             xhttp.send();
             return;

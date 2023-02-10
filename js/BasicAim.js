@@ -8,92 +8,71 @@ document.getElementById("score-load").style.display = "none";
 document.getElementById("confirm").style.display = "none";
 
 function startGame() {
-  document.getElementById("start-button").style.display = "none";   // Remove start button 
-  document.getElementById("end-game").style.display = "none";
-  score = 0;
-  time = 20;
-  document.getElementById("score").innerHTML = score;
-  document.getElementById("time").innerHTML = time;
-  intervalId = setInterval(countdown, 1000);
-  document.body.style.cursor = "crosshair";
-  spawnCircle();
+	document.getElementById("start-button").style.display = "none";   // Remove start button When game starts
+	document.getElementById("end-game").style.display = "none";       // Remove end game
+	score = 0;    // Set score and time to 0 and 20
+	time = 20;
+	document.getElementById("score").innerHTML = score;		// Give the id score in html the score
+	document.getElementById("time").innerHTML = time;		// Give id time in html the time
+	intervalId = setInterval(countdown, 1000);		// Set the interval to go down by 1000 which is 1 seconds
+	document.body.style.cursor = "crosshair";		// Change the cursor to a crosshair
+	spawnCircle();		// Calling the function SpawnCircle to spawn the circle in the game area
 }
 
 function endGame() {
-  clearInterval(intervalId);
-  document.getElementById("final-score-value").innerHTML = score;
-  document.getElementById("end-game").style.display = "block";
-  let circle = document.querySelector(".circle");
-  let gameArea = document.querySelector("#game-area");
-  document.body.style.cursor = "auto";
-  gameArea.removeChild(circle);
+	clearInterval(intervalId);	// Clear the interval
+	document.getElementById("final-score-value").innerHTML = score;	// Display the final score
+	document.getElementById("end-game").style.display = "block";	// Display the end game
+	let circle = document.querySelector(".circle");					// Getting the circle element
+	let gameArea = document.querySelector("#game-area");			// Getting the game area element
+	document.body.style.cursor = "auto";	// Changing back the cursor to normal
+	gameArea.removeChild(circle);	// Remove the circle from the game area
 }
 
 function countdown() {
-  time--;
-  document.getElementById("time").innerHTML = time;
-  if (time === 0) {
-    endGame();
-  }
+	time--;		// Make time go down by 1 every second
+	document.getElementById("time").innerHTML = time;
+	if (time === 0) {
+		endGame();	// When time is 0, the game ends
+	}
 }
 
 function spawnCircle() {
-  var gameArea = document.getElementById("game-area");
-  var x = Math.random() * 80;
-  var y = Math.random() * 80;
-  circle = document.createElement("div");
-  circle.classList.add("circle");
-  circle.id = "target";
-  circle.style.left = x + "%";
-  circle.style.top = y + "%";
-  circle.onclick = function() {
-    score++;
-    document.getElementById("score").innerHTML = score;
-    gameArea.removeChild(circle);
-    spawnCircle();
-  };
-  gameArea.appendChild(circle);
+	var gameArea = document.getElementById("game-area");
+	var x = Math.random() * 80;	// Get a random x & y coordinate inside the game area
+	var y = Math.random() * 80;
+	circle = document.createElement("div");	// Creating the div element for circle and add a class to it
+	circle.classList.add("circle");
+	circle.classList.add("animate1");
+	circle.id = "target";		// Add a id target to the circle
+	circle.style.left = x + "%";	// Adding % to the random value to top and left
+	circle.style.top = y + "%";
+	circle.onclick = function() {
+		score++; // Adding a score by 1 if a circle is clicked
+		document.getElementById("score").innerHTML = score;	// Changing the score to the updated one
+		gameArea.removeChild(circle);	// Removes the circle and adds a new one in the gamearea
+		spawnCircle();
+	};
+	gameArea.appendChild(circle);
 }
 
 function displaySubmit(){
-  document.getElementById("final-score-values").innerHTML = score;
-  document.getElementById("end-game").style.display = "none";
-  document.getElementById("submission-menu").style.display = "block";
-}
-
-function spawnCircle() {
-  var gameArea = document.getElementById("game-area");
-  var x = Math.random() * 80;
-  var y = Math.random() * 80;
-  circle = document.createElement("div");
-  circle.classList.add("circle");
-  circle.classList.add("animate1");
-  circle.id = "target";
-  circle.style.left = x + "%";
-  circle.style.top = y + "%";
-  circle.onclick = function() {
-    score++;
-    document.getElementById("score").innerHTML = score;
-    gameArea.removeChild(circle);
-    spawnCircle();
-  };
-  gameArea.appendChild(circle);
-}
-
-function displaySubmit(){
-  document.getElementById("final-score-values").innerHTML = score;
-  document.getElementById("end-game").style.display = "none";
-  document.getElementById("submission-menu").style.display = "block";
+	// just display the submission menu by displayin the score in the submission menu
+	document.getElementById("final-score-values").innerHTML = score;
+	document.getElementById("end-game").style.display = "none";
+	document.getElementById("submission-menu").style.display = "block";
 }
 
 function cancelsubmit(){
-  document.getElementById("submission-menu").style.display = "none";
-  document.getElementById("end-game").style.display = "block";
+	// Remove the submission menu and display back the end game
+	document.getElementById("submission-menu").style.display = "none";
+	document.getElementById("end-game").style.display = "block";
 }
 
 function playagain(){
-  document.getElementById("end-game").style.display = "none";
-  document.getElementById("start-button").style.display = "block";
+	// Display again the  start button to play again
+	document.getElementById("end-game").style.display = "none";
+	document.getElementById("start-button").style.display = "block";
 }
 // Functions for drop down
 let subMenu = document.getElementById("subMenu");
@@ -107,6 +86,7 @@ function changeStyle(value){
   var stylesheet = document.styleSheets[1];
   var outerCircleRule = stylesheet.cssRules[0];
   var innerCircleRule = stylesheet.cssRules[2];
+  // Call out the Css style and change the colors of the outer and inner circle to the color
 
   outerCircleRule.style.backgroundColor = value;
   innerCircleRule.style.backgroundColor = value;

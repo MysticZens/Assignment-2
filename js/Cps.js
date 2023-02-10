@@ -3,51 +3,52 @@ const gameArea = document.getElementById("game-area");
 const startButton = document.getElementById("start-button");
 const score = document.getElementById("score");
 
-document.getElementById("end-game").style.display = "none";
+document.getElementById("end-game").style.display = "none";       // Display all of the unwanted things to none
 document.getElementById("submission-menu").style.display = "none";
 document.getElementById("score-load").style.display = "none";
 document.getElementById("confirm").style.display = "none";
 
-let clicks = 0;
-let timeLeft = 10;
-let intervalId;
-let gameStarted = false;
+let clicks = 0;     // Set number of clicks to 0
+let timeLeft = 10;  // Set time to 10
+let intervalId;     // Set interval id
+let gameStarted = false;  // Game started to make the function as galse
 
 gameArea.addEventListener("click", function() {
-  if (!gameStarted || timeLeft === 0) return;
-  clicks++;
-  score.innerHTML = `Score: ${clicks}`;
+	if (!gameStarted || timeLeft === 0) return; // Ends the click function when gamestarted is false or time = 0 
+	clicks++;
+	score.innerHTML = `Score: ${clicks}`;	// Always updates the score in html
 });
 
 startButton.addEventListener("click", function() {
-  startButton.style.display = "none";
-  counter.innerHTML = "3";
-  setTimeout(function() {
-    counter.innerHTML = "2";
-  }, 1000);
-  setTimeout(function() {
-    counter.innerHTML = "1";
-  }, 2000);
-  setTimeout(function() {
-    gameStarted = true;
-    counter.innerHTML = "GO!";
-    countdown.innerHTML = `Time remaining: ${timeLeft}`;
-    intervalId = setInterval(function() {
-      timeLeft--;
-      counter.innerHTML = "";
-      countdown.innerHTML = `Time remaining: ${timeLeft}`;
-      if (timeLeft === 0) {
-        clearInterval(intervalId);
-        countdown.innerHTML = `Time's up!`;
-        document.getElementById("final-score-value").innerHTML = clicks;
-        document.getElementById("end-game").style.display = "block";
-        document.getElementById("play-again-button").addEventListener("click", playAgain);
-      }
-    }, 1000);
-  }, 3000);
+	startButton.style.display = "none";
+	counter.innerHTML = "3";
+	setTimeout(function() {		
+		counter.innerHTML = "2";
+	}, 1000);						
+	setTimeout(function() {			// Set time out for 3 2 1 using set time out and the number
+		counter.innerHTML = "1";
+	}, 2000);
+	setTimeout(function() {
+		gameStarted = true;	// Set gamestart to true when the game stars
+		counter.innerHTML = "GO!";
+		countdown.innerHTML = `Time remaining: ${timeLeft}`;	// Display the time
+		intervalId = setInterval(function() {
+			timeLeft--;		// Minus the time by 1 for every interval 
+			counter.innerHTML = "";
+			countdown.innerHTML = `Time remaining: ${timeLeft}`;
+			if (timeLeft === 0) {
+			clearInterval(intervalId);	// Ends the game and display times up when the time is 0
+			countdown.innerHTML = `Time's up!`;
+			document.getElementById("final-score-value").innerHTML = clicks;	// Display the score
+			document.getElementById("end-game").style.display = "block";		// Display end game
+			document.getElementById("play-again-button").addEventListener("click", playAgain);
+			}
+		}, 1000);
+	}, 3000);
 });
 
 function playAgain() {
+	// Resetting of all variables when play again function is called
     document.getElementById("end-game").style.display = "none";
     clicks = 0;
     timeLeft = 10;
@@ -58,10 +59,12 @@ function playAgain() {
 }
 
 function DisplaySubmit(){
-    document.getElementById("end-game").style.display = "none";
+	// Just to display the submission menu
+	document.getElementById("end-game").style.display = "none";
     document.getElementById("submission-menu").style.display = "block";
 }
 function CancelSubmit(){
+	// Cancel the submit to show back the end game
     document.getElementById("end-game").style.display = "block";
     document.getElementById("submission-menu").style.display = "none";
 }
@@ -71,11 +74,11 @@ const btn = document.getElementById("game-area");
 
 btn.addEventListener("click", ev => {
   let ripple = document.createElement('div');
-  ripple.classList = "ripple";
-  ripple.style.left = ev.offsetX + 'px';
+  ripple.classList = "ripple";			// Adding ripple class list
+  ripple.style.left = ev.offsetX + 'px';	// Giving an offset for left and top to know where the ripple comes out
   ripple.style.top = ev.offsetY + 'px';
-  btn.append(ripple);
-  ripple.addEventListener('animationend', () => ripple.remove());
+  btn.append(ripple); // Adding ripple to the game area as const at the top
+  ripple.addEventListener('animationend', () => ripple.remove()); // Once animation end remove the ripple child
 });
 
 
@@ -127,7 +130,7 @@ $(document).ready(function () {
             "beforeSend": function() {
             $("submit-score").prop("disabled", true);
             }
-        }
+        };
 
         $.ajax(settings).done(function (response) {
             console.log(response);
