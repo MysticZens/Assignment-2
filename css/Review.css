@@ -203,9 +203,18 @@ thead {
 tbody {
   color: white;
 }
+tbody tr{
+  transform: translateY(0);
+  transition: 0.5s;
+}
+tbody tr:hover{
+  transform: translateY(-10px);
+  font: bold;
+}
 
 tbody i {
   color: yellow;
+  font-size: 100%;
 }
 .rating-dropdown {
   padding: 1.5% 1% 0 1%;
@@ -313,4 +322,44 @@ html{
   height: 100%;
   z-index: -1;
   border: none;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1185px) {
+  .back-button{
+      width: 20%;
+      margin: 0 40% 0 40%;
+  }
+}
+@media screen and (max-width: 711px) {
+  .back-button{
+      width: 30%;
+      margin: 0 35% 0 35%;
+  }
+  .leaderboard-area{
+    width: 100%;
+    margin: 0;
+  }
+  .leaderboard-area > h2{
+    font-size: 150%;
+  }
+}
+@media screen and (max-width: 474px) {
+  .back-button{
+      width: 100%;
+      margin: 0;
+  }
+  .top{
+    justify-content: space-between;
+  }
+  #review-form{
+    width: 95%;
+    margin: 0 2.5% 0 2.5%;
+  }
+}
+@media screen and (max-width: 777px) {
+  tbody i{
+    font-size: 80%;
+  }
 }

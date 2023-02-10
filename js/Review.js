@@ -119,10 +119,10 @@ $(document).ready(function () {
 
 			for (var i = 0; i < response.length; i++)
 			{
-				let stars = `<i class="fa-solid fa-star" style=":${i}"></i>`
+				let stars = `<i class="fa-solid fa-star"></i>`
 				let repeat = response[i].rank;
 				for (var index = 1; index < repeat; index++) {
-					stars += `<i class="fa-solid fa-star" style=":${index}"</i>`
+					stars += `<i class="fa-solid fa-star"></i>`
 				}
 				content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
 				<td>` + stars + `</td>
@@ -171,6 +171,7 @@ function getUsersFilter(value) {
 			}
 		}
 		$("#user-list tbody").html(content);
+		toggleMenu();
 	});
 }
 
@@ -206,5 +207,6 @@ function getBackUsers(all = true) {
 		}
 
 		$("#user-list tbody").html(content);
+		toggleMenu();
 	});
 }
