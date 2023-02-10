@@ -1,14 +1,14 @@
-var score = 0;
-var time = 20;
-var intervalId;
+var score = 0;  // Set Score to 0
+var time = 20;  // Set Time to 20 seconds
+var intervalId; // Setting IntervalID for moving down the number going down
 var circle;
-document.getElementById("end-game").style.display = "none";
+document.getElementById("end-game").style.display = "none";         // Just hiding the non required stuff for now
 document.getElementById("submission-menu").style.display = "none";
 document.getElementById("score-load").style.display = "none";
 document.getElementById("confirm").style.display = "none";
 
 function startGame() {
-  document.getElementById("start-button").style.display = "none";
+  document.getElementById("start-button").style.display = "none";   // Remove start button 
   document.getElementById("end-game").style.display = "none";
   score = 0;
   time = 20;

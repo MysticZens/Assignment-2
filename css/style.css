@@ -34,7 +34,7 @@
     color:white;
 }
 
-.game:hover #popupArrow{
+.game:hover .popupArrow{
     visibility: visible;
     animation: flickering linear 0.5s infinite forwards;
 }
@@ -186,7 +186,7 @@ html{
 }
 
 /* Flicker animation */
-#popupArrow {
+.popupArrow {
     visibility: hidden;
 }
 @keyframes flickering {
