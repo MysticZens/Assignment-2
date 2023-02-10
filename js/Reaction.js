@@ -102,9 +102,9 @@ $(document).ready(function () {
     let userDate = Date();
 
     let jsondata = {
-      name: userName,
-      time: userTime,
-      date: userDate,
+      "name": userName,
+      "time": userTime,
+      "date": userDate,
     };
     //check if userName is null or nothing
     if (userName == "" || userName == null) {
@@ -167,8 +167,7 @@ $(document).ready(function () {
       var content = "";
       for (var i = 0; i < response.length && i < limit; i++) {
         content = `${content}<tr id='${response[i]._id}'><td>${
-          response[i].name
-        }</td>
+          response[i].name}</td>
             <td>${response[i].time}ms</td>
             <td>${moment(response[i].date).format(
               "Do MMMM YYYY, h:mm:ss a"
