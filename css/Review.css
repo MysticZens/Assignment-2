@@ -278,12 +278,15 @@ html{
   display: flex;
   justify-content: center;
   width: 100%;
+  transform: translateX(0);
+  transition: 0.3s;
 }
 /* Giving an animation of 5px difference when a mouse hovers over the text  */
 .sub-menu-link:hover p{
   cursor: pointer;
-  font-weight: 600;
+  font-weight: bolder;
   color: yellow;
+  transform: translateX(5px);
 }
 /* end dropdown */
 /* Animation */

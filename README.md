@@ -80,6 +80,8 @@ Note : *The gif currently in index.html is not going to be used in the end produ
 - Facebook icon : https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/2048px-Facebook_logo_36x36.svg.png
 - Instagram icon : https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png
 - Adobe Illustrator
+- Pop sound effect : https://youtu.be/-ur58fwo5Ok
+- Background music : https://youtu.be/3LwrzFBK2IQ
 
 ### Acknowledgements
 - Ng Qian Zhe  (https://github.com/MysticZens)
