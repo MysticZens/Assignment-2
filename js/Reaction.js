@@ -30,7 +30,6 @@ gameArea.addEventListener("click", function () {
     let endTime = new Date().getTime(); // end time is the time when clicked
     clickCount++; // Click is added when the area turns green and clicked
     totalTime += endTime - startTime; // Total time is end time minus start time
-
     time.innerHTML = (totalTime / clickCount).toFixed(2);
     averageTime = (totalTime / clickCount).toFixed(2); // Js calculate average reaction time and store for API
     gameArea.style.backgroundColor = "red"; // Changes back the background to red

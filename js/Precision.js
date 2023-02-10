@@ -2,6 +2,7 @@ var score = 0;
 var time = 20;
 var intervalId;
 var circle;
+var audio = new Audio("sound/pop.mp4");
 
 document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
@@ -52,6 +53,9 @@ function spawnCircle() {
     document.getElementById("score").innerHTML = score;
     gameArea.removeChild(circle);
     spawnCircle();
+    audio.currentTime = 0;
+    audio.volume = 0.1;
+    audio.play();
   };
   gameArea.appendChild(circle);
 }

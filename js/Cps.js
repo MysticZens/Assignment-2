@@ -14,9 +14,9 @@ let intervalId;     // Set interval id
 let gameStarted = false;  // Game started to make the function as false
 
 gameArea.addEventListener("click", function() {
-	if (!gameStarted || timeLeft === 0) return; // Ends the click function when gamestarted is false or time = 0 
-	clicks++;
-	score.innerHTML = `Score: ${clicks}`;	// Always updates the score in html
+    if (!gameStarted || timeLeft === 0) return; // Ends the click function when gamestarted is false or time = 0 
+    clicks++;
+    score.innerHTML = `Score: ${clicks}`;	// Always updates the score in html
 });
 
 startButton.addEventListener("click", function() {

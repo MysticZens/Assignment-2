@@ -2,6 +2,8 @@ var score = 0;  // Set Score to 0
 var time = 20;  // Set Time to 20 seconds
 var intervalId; // Setting IntervalID for moving down the number going down
 var circle;
+var audio = new Audio("sound/pop.mp4");
+
 document.getElementById("end-game").style.display = "none";         // Just hiding the non required stuff for now
 document.getElementById("submission-menu").style.display = "none";
 document.getElementById("score-load").style.display = "none";
@@ -52,6 +54,9 @@ function spawnCircle() {
 		document.getElementById("score").innerHTML = score;	// Changing the score to the updated one
 		gameArea.removeChild(circle);	// Removes the circle and adds a new one in the gamearea
 		spawnCircle();
+    audio.currentTime = 0;
+    audio.volume = 0.1;
+    audio.play();
 	};
 	gameArea.appendChild(circle);
 }
