@@ -1,6 +1,6 @@
-const gameArea = document.getElementById("gameArea");
-const startBtn = document.getElementById("startBtn");
-const result = document.getElementById("result");
+let gameArea = document.getElementById("gameArea");
+let startBtn = document.getElementById("startBtn");
+let result = document.getElementById("result");
 const time = document.getElementById("time");
 const message = document.getElementById("message");
 
@@ -151,7 +151,7 @@ $(document).ready(function () {
           "x-apikey": APIKEY,
           "cache-control": "no-cache"
           },
-      }
+      };
 
       $.ajax(settings).done(function (response) {
           console.log(response);
@@ -160,10 +160,10 @@ $(document).ready(function () {
           {
             content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
             <td>${response[i].time}ms</td>
-            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+            <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`;
           }
 
           $("#user-list tbody").html(content);
       });
   }
-})
+});
