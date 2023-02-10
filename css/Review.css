@@ -142,7 +142,7 @@ textarea {
 }
 .back-button{
     width: 12%;
-    margin: 0 44% 0 44%;
+    margin: 0 44% 0 43%;
     color: white;
     text-decoration: none;
     font-size: 170%;
@@ -158,7 +158,7 @@ textarea {
 }
 .back-button a:hover{
     text-decoration: none;
-    color: #FFCCCB;
+    color: #b4c5e4;
     text-decoration: none;
 }
 #review-button {

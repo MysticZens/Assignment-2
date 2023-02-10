@@ -70,10 +70,9 @@
     cursor: pointer;
     text-align: center;
 }
-
-#start-button:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 20px black;
+#start-button:hover{
+    background-color: #b4c5e4;
+    box-shadow: 0px 0px 10px 0px #b4c5e4;
 }
 
 #score {
