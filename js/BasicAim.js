@@ -2,7 +2,6 @@ var score = 0;
 var time = 20;
 var intervalId;
 var circle;
-var objectArray = Array();
 document.getElementById("end-game").style.display = "none";
 document.getElementById("submission-menu").style.display = "none";
 document.getElementById("score-load").style.display = "none";
@@ -111,7 +110,7 @@ function changeStyle(value){
 
   outerCircleRule.style.backgroundColor = value;
   innerCircleRule.style.backgroundColor = value;
-  alert("Color Changed Successfully")
+  alert("Color Changed Successfully");
 }
 
 $(document).ready(function () {
@@ -157,7 +156,7 @@ $(document).ready(function () {
             "beforeSend": function() {
               $("submit-score").prop("disabled", true);
             }
-        }
+        };
 
         $.ajax(settings).done(function (response) {
             $("#submit-score").prop("disabled", false);
@@ -170,10 +169,10 @@ $(document).ready(function () {
             }, 2000);
         });
       }
-  })
+  });
 
   function getUsers(all = true) {
-    let settings = {
+    var settings = {
         "async": true,
         "crossDomain": true,
         "url": "https://minigamefps-5bb0.restdb.io/rest/basicaiming?q={}&sort=score&dir=-1",
@@ -183,21 +182,21 @@ $(document).ready(function () {
         "x-apikey": APIKEY,
         "cache-control": "no-cache"
         },
-    }   
+    }; 
 
     $.ajax(settings).done(function (response) {
       $("#submit-score").prop("disabled", false);
-      let limit = 10;
-      let content = "";
+      const limit = 10;
+      var content = "";
       for (var i = 0; i < response.length && i < limit; i++)
       {
         content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
         <td>${response[i].score}</td>
-        <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`
+        <td>${moment(response[i].date).format('Do MMMM YYYY, h:mm:ss a')}</td></tr>`;
       }
 
       $("#user-list tbody").html(content);
-    })
+    });
   }
 
 });
