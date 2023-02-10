@@ -203,16 +203,9 @@ thead {
 tbody {
   color: white;
 }
-tbody tr{
-  transform: translateY(0);
-  transition: 0.5s;
-}
-tbody tr:hover{
-  transform: translateY(-10px);
-  font: bold;
-}
 
 tbody i {
+  z-index: -2;
   color: yellow;
   font-size: 100%;
 }

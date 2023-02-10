@@ -11,7 +11,7 @@ document.getElementById("confirm").style.display = "none";
 let clicks = 0;     // Set number of clicks to 0
 let timeLeft = 10;  // Set time to 10
 let intervalId;     // Set interval id
-let gameStarted = false;  // Game started to make the function as galse
+let gameStarted = false;  // Game started to make the function as false
 
 gameArea.addEventListener("click", function() {
 	if (!gameStarted || timeLeft === 0) return; // Ends the click function when gamestarted is false or time = 0 
