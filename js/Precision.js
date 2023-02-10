@@ -146,7 +146,7 @@ $(document).ready(function () {
       else {
         document.getElementById("submission-menu").style.display = "none";
         document.getElementById("score-load").style.display = "block";
-        let settings = {
+        var settings = {
             "async": true,
             "crossDomain": true,
             "url": "https://minigamefps-5bb0.restdb.io/rest/precisionaiming",
@@ -177,7 +177,7 @@ $(document).ready(function () {
   });
 
   function getUsers(limit = 10, all = true) {
-    let settings = {
+    var settings = {
         "async": true,
         "crossDomain": true,
         "url": "https://minigamefps-5bb0.restdb.io/rest/precisionaiming?q={}&sort=score&dir=-1",
@@ -190,7 +190,7 @@ $(document).ready(function () {
     };
 
     $.ajax(settings).done(function (response) {
-        let content = "";
+        var content = "";
         for (var i = 0; i < response.length && i < limit; i++)
         {
           content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>

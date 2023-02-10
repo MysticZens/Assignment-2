@@ -112,7 +112,7 @@ $(document).ready(function () {
       else {
         document.getElementById("submission-menu").style.display = "none";
         document.getElementById("score-load").style.display = "block";
-        let settings = {
+        var settings = {
             "async": true,
             "crossDomain": true,
             "url": "https://minigamefps-5bb0.restdb.io/rest/clickspersecond",

@@ -36,7 +36,8 @@ gameArea.addEventListener("click", function() {
     message.classList.add("hidden");
     if (clickCount < 5) {
       intervalId = setTimeout(startGame, Math.random() * 5000 + 1000);
-    } else {
+    } 
+    else {
       gameStarted = false;
       document.getElementById("end-game").style.display = "block";
       document.getElementById("result").style.display = "none";
@@ -109,7 +110,7 @@ $(document).ready(function () {
       else {
         document.getElementById("submission-menu").style.display = "none";
         document.getElementById("score-load").style.display = "block";
-        let settings = {
+        var settings = {
             "async": true,
             "crossDomain": true,
             "url": "https://minigamefps-5bb0.restdb.io/rest/reactiontime",
@@ -124,7 +125,7 @@ $(document).ready(function () {
             "beforeSend": function() {
             $("submit-score").prop("disabled", true);
             }
-        }
+        };
 
         $.ajax(settings).done(function (response) {
             console.log(response);
@@ -141,7 +142,7 @@ $(document).ready(function () {
   });
 
   function getUsers(limit = 10, all = true) {
-      let settings = {
+      var settings = {
           "async": true,
           "crossDomain": true,
           "url": "https://minigamefps-5bb0.restdb.io/rest/reactiontime?q={}&sort=time&dir=1",
@@ -155,7 +156,7 @@ $(document).ready(function () {
 
       $.ajax(settings).done(function (response) {
           console.log(response);
-          let content = "";
+          var content = "";
           for (var i = 0; i < response.length && i < limit; i++)
           {
             content = `${content}<tr id='${response[i]._id}'><td>${response[i].name}</td>
