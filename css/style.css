@@ -1,3 +1,6 @@
+html{
+    cursor: context-menu;
+}
 /* Socials animation*/
 .social-icon {
     display: inline-block;
@@ -17,18 +20,24 @@
 
 /* end socials */
 .main-header{
+    animation: floating 6s ease-in-out infinite;
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
     margin:2%;
+    /* text-shadow: 5px -5px yellow; */
+    font-size: 100%;
+    color: white;
+}
+.main-header > h1{
+    font-size: 170%;
 }
 .game-header{
     color: white;
     text-align: center;     
+    font-family: 'Press Start 2P', cursive;
 }
 .a{
     border:solid 3px green;
-}
-.main-header{
-    color:white;
 }
 .game:hover{
     text-decoration: none;
@@ -37,6 +46,11 @@
     cursor: pointer;
     transform: translateY(-10px);
 }
+.game:hover #popupArrow{
+    visibility: visible;
+    animation: opener linear 0.5s infinite forwards;
+}
+
 .hr-bottom{
     padding:2%;
     border-bottom: 2px solid rgba(0,22,36,255);
@@ -75,6 +89,7 @@
 .game-choice{
     display: flex;
     flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
 }
 .row-one{
     display: flex;
@@ -93,8 +108,12 @@
     transform: translateY(0);
     transition: 0.2s;
 }
+.game > img{
+    margin-bottom: 5% ;
+}
 .game-choice > div > a > h2{
-    font-size: 150%;
+    margin-top: 2%;
+    font-size: 130%;
 }
 .game-text{
     margin: 2% 2% 0 2%;
@@ -121,9 +140,6 @@
     margin-top:10%;
     width:15%;
 }
-html{
-    cursor: context-menu;
-}
 /* Zoom animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
@@ -138,6 +154,31 @@ html{
 @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+}
+/* For the > beside */
+#popupArrow {
+    visibility: hidden;
+}
+@keyframes opener {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+/* Hover effect for header */
+@keyframes floating {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 
@@ -221,6 +262,12 @@ html{
     }
     .third-text{
         font-size: 90%;
+    }
+    .main-header{
+        font-size: 70%;
+    }
+    .main-header > h1{
+        font-size: 100%;
     }
 }
     

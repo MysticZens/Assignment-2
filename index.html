@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8216e8d135.js" crossorigin="anonymous"></script>
     <title>Minigame Practice (FPS)</title>
     <link rel="icon" href="imgs/Target.png" type="image/png">
@@ -15,12 +16,13 @@
 <body>
   <iframe class = "background" src="Stars.html"></iframe>
   <div w3-include-header="header.html"></div> 
+  <br><br>
 
   <div id="information">
     <div id="header">
       <!-- Box for infos on the game -->
       <div class="main-header">
-        <h1 class = "animate" style= "font-size: 40px;">FPS-Minigame!</h1>
+        <h1 class = "animate">FPS-Minigame!</h1>
         <p class = "animate">Start playing now and claim the top 10 spot!</p>
       </div>
       <div class="animate game-text">
@@ -41,24 +43,24 @@
       <div class="game-choice">
         <div class="row-one">
           <a href= "BasicAim.html" class="game game-aim">
-            <h2>Basic Aiming</h2>
+            <h2><span id="popupArrow">&#62;</span>Basic Aiming</h2>
             <img src="imgs/Basic_Targets.png" alt="basicaim">
 
           </a>
           <a href = "Reaction.html" class="game game-reaction">
-            <h2>Reaction Time</h2>
+            <h2><span id="popupArrow">&#62;</span>Reaction Time</h2>
             <img src="imgs/Clock.png" alt="reactiontime"> 
 
           </a>
         </div>
         <div class="row-one">
           <a href = "Cps.html" class="game game-click">
-            <h2>Clicks Per Second</h2>
+            <h2><span id="popupArrow">&#62;</span>Clicks Per Second</h2>
             <img src="imgs/Mouse_CLicking.png" alt="cps">
 
           </a>
           <a href = "Precision.html" class="game game-precision">
-            <h2>Precision Aiming</h2>
+            <h2><span id="popupArrow">&#62;</span>Precision Aiming</h2>
             <img src="imgs/Precision_Targets.png" alt="precisionaim">
 
           </a>
