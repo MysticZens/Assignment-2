@@ -61,12 +61,12 @@ $(document).ready(function () {
 		//check if userName is null or nothing
 		if (userName == "" || userName == null)
 		{
-		alert("You must input a name!");
+			alert("You must input a name!");
 		}
 		//check if userName is more than 14 characters
 		else if (userName.length > 14)
 		{
-		  alert("Your name must be at least 14 characters or more.");
+		  	alert("Your name must be at least 14 characters or more.");
 		}
 		//POST and display the new database inside the leaderboards
 		else {

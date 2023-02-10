@@ -351,8 +351,3 @@ html{
     margin: 0 2.5% 0 2.5%;
   }
 }
-@media screen and (max-width: 777px) {
-  tbody i{
-    font-size: 80%;
-  }
-}
