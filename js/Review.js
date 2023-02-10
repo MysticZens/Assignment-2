@@ -49,24 +49,26 @@ function toggleMenu(){
 
 
 $(document).ready(function () {
+	//Get the API key
 	const APIKEY = "63e0ccba3bc6b255ed0c46f2";
 	getUsers();
+	//When person clicks submit button, api starts
 	$("#submit-review").on("click", function(e) {
-		e.preventDefault();
+		e.preventDefault(); //Validation purposes
 		let userName = $("#name").val();
 		let userRank = $("#rank").val();
 		let userMessage = $("#comment").val();
-  
-		if (userName == "")
+		//check if userName is null or nothing
+		if (userName == "" || userName == null)
 		{
 		alert("You must input a name!");
 		}
-  
+		//check if userName is more than 14 characters
 		else if (userName.length > 14)
 		{
 		  alert("Your name must be at least 14 characters or more.");
 		}
-  
+		//POST and display the new database inside the leaderboards
 		else {
 			document.getElementById("score-load").style.display = "block";      
 			let jsondata = {
@@ -105,7 +107,7 @@ $(document).ready(function () {
 			});
 		}
 	});
-  
+	//Function to GET the database and print the leaderboards when website loads, limit only display 10 leaderboards
 	function getUsers(all = true) {
 		let settings = {
 			"async": true,
