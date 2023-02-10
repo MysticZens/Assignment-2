@@ -77,10 +77,13 @@ function spawnCircle() {
   circle.style.left = x + "%";
   circle.style.top = y + "%";
   circle.onclick = function() {
-    score++;
-    document.getElementById("score").innerHTML = score;
-    gameArea.removeChild(circle);
-    spawnCircle();
+		score++; 
+		document.getElementById("score").innerHTML = score;	
+		gameArea.removeChild(circle);
+		spawnCircle();
+    audio.currentTime = 0;
+    audio.volume = 0.1;
+    audio.play();
   };
   gameArea.appendChild(circle);
 }

@@ -66,7 +66,7 @@ $(document).ready(function () {
 		//check if userName is more than 14 characters
 		else if (userName.length > 14)
 		{
-		  	alert("Your name must be at least 14 characters or more.");
+		  	alert("Your name must be at most 14 characters or less.");
 		}
 		//POST and display the new database inside the leaderboards
 		else {

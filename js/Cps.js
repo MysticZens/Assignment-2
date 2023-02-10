@@ -107,7 +107,7 @@ $(document).ready(function () {
       //check if userName is more than 14 characters
       else if (userName.length > 14)
       {
-        alert("Your name must be at least 14 characters or more.");
+        alert("Your name must be at most 14 characters or less.");
       }
       //POST and display the new database inside the leaderboards
       else {
@@ -139,6 +139,9 @@ $(document).ready(function () {
             setTimeout(function() {
               document.getElementById("confirm").style.display = "none";
               document.getElementById("start-button").style.display = "block";
+              clicks = 0;
+              timeLeft = 10;
+              gameStarted = false;
               score.innerHTML = "Score: 0";
               countdown.innerHTML = `Time remaining: ${timeLeft}`;
             }, 2000);
