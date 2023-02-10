@@ -138,6 +138,8 @@ $(document).ready(function () {
             setTimeout(function() {
               document.getElementById("confirm").style.display = "none";
               document.getElementById("start-button").style.display = "block";
+              score.innerHTML = "Score: 0";
+              countdown.innerHTML = `Time remaining: ${timeLeft}`;
             }, 2000);
         });
       }
