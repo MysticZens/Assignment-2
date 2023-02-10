@@ -38,7 +38,6 @@ Here are some of the features that I have used for my website:
 - Feature 7 - A game where the user has to click as soon as the target appears to test the reaction time of the user
 - Feature 8 - A game where the user has to click the Game area as many times as possible to test click speed 
 ### Features Left to Implement
-- Feature 1 - Fade in and out between pages (transition between pages)
 ## Technologies Used
 - Html is used to create my words and the layout of my pages
 - Css is used to style and apply fonts to text and create my growing text
