@@ -1,12 +1,13 @@
 /* TARGET */
+/* Outer layer of the circle */
 .circle {
-    width: 70px;
+    width: 70px;    
     height: 70px;
     border-radius: 50%;
     background-color: red;
     position: relative;
 }
-  
+/* Middle layer of circle */  
 .circle:before {
     content: "";
     position: absolute;
@@ -18,7 +19,7 @@
     border-radius: 50%;
     background-color: white;
 }
-
+/* Inner circle of the circle */
 .circle:after {
     content: "";
     position: absolute;
@@ -48,6 +49,7 @@
     transform: translateX(0);
     transition: 0.2s;
 }
+/* Giving the back button a hover effect to left */
 .back-button:hover{
     transform: translateX(-10px);
 }
@@ -78,7 +80,7 @@
 
 /* Game stuff */
 
-
+/* Play area for the game */
 #game-area {
     border: 1px solid black;
     color: white;
@@ -90,7 +92,7 @@
     border-radius: 50px;
     background-color: rgba(4, 4, 58, 0.5);
 }
-  
+/* Giving the start button a glow effect */
 #start-button {
     position: absolute;
     color: black;
@@ -105,27 +107,31 @@
     cursor: pointer;
     text-align: center;
 }
+/* Giving a hover effect color change to the button */
 #start-button:hover{
     background-color: #b4c5e4;
     box-shadow: 0px 0px 10px 0px #b4c5e4;
 }
-
+/* Center the button */
 .score-time-color{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .color-change{
     margin-top: 3%;
     color: white;
     width: 10%;
     text-align: center;
 }
+/* Giving the text a glow effect */
 .color-change > p{
     color: white;
     text-shadow: 0px 0px 10px wheat;
 }
+/* Giving it a shadow effect */
 #time-checker{
     width: 22%;
     margin: 0 39% 0 39%;
@@ -137,6 +143,7 @@
     border-radius: 20px;
     box-shadow: 5px 5px 10px #888888;
 }
+/* Giving the blue a bright effect */
 #scoreboard{
     position: absolute;
     margin: 2% 0 0 15%;
@@ -144,6 +151,7 @@
     color: dodgerblue;
     text-shadow: 0px 0px 10px gray;
 }
+/* keeping the same cursor throughout the whole html */
 html{
     cursor: context-menu;
 }
@@ -173,7 +181,7 @@ html{
 #final-score-value {
     color: #333;
 }
-  
+
 #play-again-button, #submit-button {
     padding: 10px 20px;
     border-radius: 20px;
@@ -183,7 +191,7 @@ html{
     cursor: pointer;
     box-shadow: 0px 0px 5px 0px #ccc;
 }
-  
+/* Green to play again button */
 #play-again-button {
     background-color: #4caf50;
     color: white;
@@ -232,6 +240,7 @@ html{
     cursor: pointer;
     padding: 0 8px 8px 8px;
 }
+/* Give a red color to hover on the X */
 #close:hover{
     color: red;
 }

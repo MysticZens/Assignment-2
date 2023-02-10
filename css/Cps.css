@@ -7,6 +7,7 @@
 #score{
     margin-left:15% ;
 }
+/* Give the countdown a glow effect */
 #countdown {
     width: 22%;
     margin: 0 39% 0 39%;
@@ -21,6 +22,7 @@
 #counter{
     text-align: center;
 }
+/* Game area where the game is played */
 #game-area {
     position: relative;
     width: 80%;
@@ -36,6 +38,7 @@
     user-select: none;
     overflow: hidden;
 }
+/* Ripple size for when is added through js */
 .ripple{
     position: absolute;
     width: 0px;
@@ -46,7 +49,7 @@
     transform: translate(-50%,-50%);
     animation: explode 1.5s ease forwards;
 }
-
+/* Keyframe to make ripple grow from 0px to 600px */
 @keyframes explode{
     to{
         width: 600px;
@@ -177,6 +180,7 @@
     transform: scale(1);
     box-shadow: 0px 0px 20px gray;
 }
+/* keep the same cursor throughout the html page */
 html{
     cursor: context-menu;
 }
@@ -198,6 +202,7 @@ html{
     transform: translateX(0);
     transition: 0.2s;
 }
+/* Giving a slight move to the left on hover */
 .back-button:hover{
     transform: translateX(-10px);
 }
@@ -228,6 +233,7 @@ html{
     position: absolute;
     margin: 178px 35% 15% 35%;
 }
+/* Give a glow effect */
 .successful-submission{
     position: absolute;
     text-align: center;

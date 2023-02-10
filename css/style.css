@@ -9,13 +9,14 @@
     height: 35px;
     transition: all 0.3s ease-in-out;
 }
-  
+ /* Give a spinning 3d */
 .social-icon img:hover {
     transform: rotateY(180deg);
     text-decoration: none;
 }
 
 /* end socials */
+/* Give a repeated float effect as used in keyframe */
 .main-header{
     animation: float 6s ease-in-out infinite;
     text-shadow: -4px -4px black;
@@ -33,12 +34,12 @@
 .main-header{
     color:white;
 }
-
+/* Give the popup arrow opacity 1 when hovered */
 .game:hover .popupArrow{
     visibility: visible;
     animation: flickering linear 0.5s infinite forwards;
 }
-
+/* js give a line */
 .hr-bottom{
     padding:2%;
     border-bottom: 2px solid rgba(0,22,36,255);
@@ -82,7 +83,7 @@
     display: flex;
     flex-direction: row;
 }
-
+/* Css for all the list of games */
 .game{
     border-radius: 5px;
     border: 1px solid black;
@@ -96,12 +97,14 @@
     transition: 0.4s;
     position: relative;
 }
+/* Give a move top by 10px when hover */
 .game:hover{
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     transform: translateY(-10px);
 }
+/* For the bring down/up effect on hover */
 .game::before{
     border-radius: 5px;
     content: "";
@@ -123,14 +126,6 @@
     transform: scaleY(1);
 }
 
-
-/* .game:hover{
-    text-decoration: none;
-    color: #FFCCCB;
-    background-color: rgba(22, 22, 76, 0.6);
-    cursor: pointer;
-    transform: translateY(-10px);
-} */
 .game-choice > div > a > h2{
     font-size: 120%;
     font-family: 'Press Start 2P', cursive;
